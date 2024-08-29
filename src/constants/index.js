@@ -8,6 +8,5 @@ const navLinkArray = [
 ];
 
 export const introduction =
-  'As a skilled full-stack developer, I specialize in building responsive, dynamic web applications using modern frameworks such as React, Vue 3 with Composition API, and Tailwind CSS. I excel at managing state with Redux Toolkit and integrating third-party APIs to create seamless user experiences. My expertise extends to backend development with TypeScript, ensuring efficient data flow and performance optimization. With a focus on accessibility and user experience, I continuously refine and enhance web applications to meet the highest standards.';
-
+  'As a full-stack developer, I build responsive web apps using React, Vue 3, and Tailwind CSS, integrating Redux Toolkit and third-party APIs. I ensure efficient backend performance with TypeScript, focusing on accessibility and seamless user experiences.';
 export default navLinkArray;

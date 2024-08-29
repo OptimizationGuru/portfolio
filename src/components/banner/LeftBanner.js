@@ -23,12 +23,12 @@ const LeftBanner = () => {
         <div className="flex flex-col gap-5">
           <h4 className="text-lg font-normal">Welcome to my World!</h4>
 
-          <h1 className="text-6xl font-bold">
+          <h1 className="text-6xl font-bold text-white">
             Hi, I'm
             <span className="text-6xl   text-designColor"> Shivam Tiwari</span>
           </h1>
 
-          <h2 className="font-bold text-4xl">
+          <h2 className="font-bold text-4xl text-white">
             {' '}
             a <span>{text}. </span>
             <Cursor
@@ -75,9 +75,6 @@ const LeftBanner = () => {
         </div>
       </div>
       <div className="w-1/2"></div>
-      {/* <div>
-        <img alt="my_pic" src={bannerImg} className=" mr-[150px] mt-[100px] " />
-      </div> */}
     </section>
   );
 };

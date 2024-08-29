@@ -23,3 +23,7 @@ body {
     transition-all hover:text-designColor cursor-pointer duration-300;
   }
 }
+
+.active {
+  color: white;
+}

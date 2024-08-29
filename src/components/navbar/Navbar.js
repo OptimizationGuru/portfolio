@@ -5,7 +5,7 @@ import { Link } from 'react-scroll';
 
 const Navbar = () => {
   return (
-    <div className="flex justify-between py-4 font-titleFont border-b-[1px] border-b-gray-100">
+    <div className="flex justify-between py-4 sticky top-0 z-50 bg-bodyColor font-titleFont border-b-[1px] border-b-gray-100">
       <div>
         <img src={logo} alt="logo" />
       </div>
@@ -13,7 +13,7 @@ const Navbar = () => {
         {navLinkArray.map(({ id, title, link }) => (
           <li
             key={id}
-            className="mx-4 pt-4 px-4 text-xl hover:text-designColor duration-300"
+            className="mx-4 pt-4 px-4 text-xl text-gray-400 hover:text-designColor duration-300 "
           >
             <Link
               activeClass="active"
