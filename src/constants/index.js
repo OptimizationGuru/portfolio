@@ -10,3 +10,6 @@ const navLinkArray = [
 export const introduction =
   'As a full-stack developer, I build responsive web apps using React, Vue 3, and Tailwind CSS, integrating Redux Toolkit and third-party APIs. I ensure efficient backend performance with TypeScript, focusing on accessibility and seamless user experiences.';
 export default navLinkArray;
+
+export const nextStreamDesc =
+  'a cutting-edge streaming platform optimized for lightning-fast video loading, utilizing debouncing and caching for efficiency, offering exceptional user experience with real-time search suggestions and a robust live chat feature.';

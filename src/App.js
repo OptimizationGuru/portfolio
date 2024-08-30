@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from './components/navbar/Navbar';
 import Banner from './components/banner/Banner';
 import Features from './components/feature/Features';
+import Projects from './components/projects/Projects';
 // import { Link } from 'react-scroll';
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
         <Navbar />
         <Banner />
         <Features />
+        <Projects />
       </div>
     </div>
   );
