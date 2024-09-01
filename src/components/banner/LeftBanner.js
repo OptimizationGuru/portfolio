@@ -2,7 +2,7 @@ import React from 'react';
 
 import { introduction } from '../../constants';
 import { Cursor, useTypewriter } from 'react-simple-typewriter';
-import { FaFacebookF, FaLinkedin, FaReact, FaTwitter } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaReact, FaTwitter } from 'react-icons/fa';
 import {
   SiJavascript,
   SiMysql,
@@ -47,13 +47,13 @@ const LeftBanner = () => {
 
         <div className="flex justify-between">
           <div className="">
-            <h2 className="gap-4 my-4 text-xl">Find me in</h2>
+            <h2 className="gap-4 my-4 text-xl">Connect with me..</h2>
             <div className="flex gap-4">
               <span className="bannerIcon">
-                <FaFacebookF />
+                <FaLinkedin />
               </span>
               <span className="bannerIcon">
-                <FaLinkedin />
+                <FaGithub />
               </span>
               <span className="bannerIcon">
                 <FaTwitter />
