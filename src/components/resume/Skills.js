@@ -1,71 +1,137 @@
 import React from 'react';
-import ResumeCard from './ResumeCard';
+import { motion } from 'framer-motion';
 
 const Skills = () => {
   return (
-    <div className="flex justify-between items-center">
-      <div className="flex flex-col justify-center">
-        <div className="py-12 font-titleFont">
-          <p className="text-designColor text-sm tracking-[4px]">2007-2019</p>
-          <h2 className="text-4xl font-bold">Skills</h2>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1, transition: { duration: 0.5 } }}
+      className="flex justify-between  w-full gap-20"
+    >
+      <div className="w-1/2">
+        <div className="py-12 font-titleFont flex flex-col gap-2">
+          <p className="text-designColor text-sm tracking-[4px]">
+            Frontend Development
+          </p>
+          <h2 className="text-4xl font-bold">Adaptive UI Engineering</h2>
         </div>
 
-        <div className="w-full border-black border-l-[6px] border-opacity-30 flex flex-col gap-4">
-          <ResumeCard
-            program={'Bachelor of Technology'}
-            timeline={'2015-2019'}
-            university={'Indian Institute of Technology Guwahati'}
-            grade={'7.68 / 10'}
-            desc={' CST'}
-          />
-          <ResumeCard
-            program={'Bachelor of Technology'}
-            timeline={'2015-2019'}
-            university={'Indian Institute of Technology Guwahati'}
-            grade={'7.68 / 10'}
-            desc={' CST'}
-          />
-          <ResumeCard
-            program={'Bachelor of Technology'}
-            timeline={'2015-2019'}
-            university={'Indian Institute of Technology Guwahati'}
-            grade={'7.68 / 10'}
-            desc={' CST'}
-          />
+        <div className="mt-14 w-full">
+          <p className="text-sm uppercase font-medium">JavaScript</p>
+          <span className="w-full h-2 mt-2 bg-black bg-opacity-40 inline-flex rounded-lg ">
+            <span className="w-[90%] h-full bg-gradient-to-r rounded-lg from-blue-700 via-pink-500 to-red-600 relative">
+              <span className="absolute  -top-7 right-0">90%</span>
+            </span>
+          </span>
+        </div>
+
+        <div className="mt-14 w-full">
+          <p className="text-sm uppercase font-medium">React JS</p>
+          <span className="w-full h-2 mt-2 bg-black bg-opacity-40 inline-flex rounded-lg ">
+            <span className="w-[85%] h-full bg-gradient-to-r rounded-lg from-blue-700 via-pink-500 to-red-600 relative">
+              <span className="absolute  -top-7 right-0">85%</span>
+            </span>
+          </span>
+        </div>
+
+        <div className="mt-14 w-full">
+          <p className="text-sm  font-medium">State Management/Redux</p>
+          <span className="w-full h-2 mt-2 bg-black bg-opacity-40 inline-flex rounded-lg ">
+            <span className="w-[90%] h-full bg-gradient-to-r rounded-lg from-blue-700 via-pink-500 to-red-600 relative">
+              <span className="absolute  -top-7 right-0">90%</span>
+            </span>
+          </span>
+        </div>
+
+        <div className="mt-14 w-full">
+          <p className="text-sm uppercase font-medium">HTML/CSS</p>
+          <span className="w-full h-2 mt-2 bg-black bg-opacity-40 inline-flex rounded-lg ">
+            <span className="w-[75%] h-full bg-gradient-to-r rounded-lg from-blue-700 via-pink-500 to-red-600 relative">
+              <span className="absolute  -top-7 right-0">75%</span>
+            </span>
+          </span>
+        </div>
+        <div className="mt-14 w-full">
+          <p className="text-sm  font-medium">TailwindCSS</p>
+          <span className="w-full h-2 mt-2 bg-black bg-opacity-40 inline-flex rounded-lg ">
+            <span className="w-[80%] h-full bg-gradient-to-r rounded-lg from-blue-700 via-pink-500 to-red-600 relative">
+              <span className="absolute  -top-7 right-0">80%</span>
+            </span>
+          </span>
+        </div>
+
+        <div className="mt-14 w-full">
+          <p className="text-sm  font-medium">VueJS</p>
+          <span className="w-full h-2 mt-2 bg-black bg-opacity-40 inline-flex rounded-lg ">
+            <span className="w-[80%] h-full bg-gradient-to-r rounded-lg from-blue-700 via-pink-500 to-red-600 relative">
+              <span className="absolute  -top-7 right-0">80%</span>
+            </span>
+          </span>
         </div>
       </div>
 
-      <div className="flex flex-col justify-center">
-        <div className="py-12 font-titleFont">
-          <p className="text-designColor text-sm tracking-[4px]">2007-2019</p>
-          <h2 className="text-4xl font-bold">Education Quality</h2>
+      <div className="w-1/2">
+        <div className="py-12 font-titleFont flex flex-col gap-2">
+          <p className="text-designColor text-sm tracking-[4px]">
+            Backend Development
+          </p>
+          <h2 className="text-4xl font-bold">Resilient Backend Engineering</h2>
         </div>
 
-        <div className="w-full  border-black border-l-[6px] border-opacity-30 flex flex-col gap-4">
-          <ResumeCard
-            program={'Bachelor of Technology'}
-            timeline={'2015-2019'}
-            university={'Indian Institute of Technology Guwahati'}
-            grade={'7.68 / 10'}
-            desc={' CST'}
-          />
-          <ResumeCard
-            program={'Bachelor of Technology'}
-            timeline={'2015-2019'}
-            university={'Indian Institute of Technology Guwahati'}
-            grade={'7.68 / 10'}
-            desc={' CST'}
-          />
-          <ResumeCard
-            program={'Bachelor of Technology'}
-            timeline={'2015-2019'}
-            university={'Indian Institute of Technology Guwahati'}
-            grade={'7.68 / 10'}
-            desc={' CST'}
-          />
+        <div className="mt-14 w-full">
+          <p className="text-sm uppercase font-medium">NestJS</p>
+          <span className="w-full h-2 mt-2 bg-black bg-opacity-40 inline-flex rounded-lg ">
+            <span className="w-[85%] h-full bg-gradient-to-r rounded-lg from-blue-700 via-pink-500 to-red-600 relative">
+              <span className="absolute  -top-7 right-0">85%</span>
+            </span>
+          </span>
+        </div>
+
+        <div className="mt-14 w-full">
+          <p className="text-sm uppercase font-medium">TypeScript</p>
+          <span className="w-full h-2 mt-2 bg-black bg-opacity-40 inline-flex rounded-lg ">
+            <span className="w-[85%] h-full bg-gradient-to-r rounded-lg from-blue-700 via-pink-500 to-red-600 relative">
+              <span className="absolute  -top-7 right-0">85%</span>
+            </span>
+          </span>
+        </div>
+
+        <div className="mt-14 w-full">
+          <p className="text-sm  font-medium">MySQL</p>
+          <span className="w-full h-2 mt-2 bg-black bg-opacity-40 inline-flex rounded-lg ">
+            <span className="w-[90%] h-full bg-gradient-to-r rounded-lg from-blue-700 via-pink-500 to-red-600 relative">
+              <span className="absolute  -top-7 right-0">90%</span>
+            </span>
+          </span>
+        </div>
+
+        <div className="mt-14 w-full">
+          <p className="text-sm uppercase font-medium">MongoDB</p>
+          <span className="w-full h-2 mt-2 bg-black bg-opacity-40 inline-flex rounded-lg ">
+            <span className="w-[85%] h-full bg-gradient-to-r rounded-lg from-blue-700 via-pink-500 to-red-600 relative">
+              <span className="absolute  -top-7 right-0">85%</span>
+            </span>
+          </span>
+        </div>
+        <div className="mt-14 w-full">
+          <p className="text-sm  font-medium">PostgreSQL</p>
+          <span className="w-full h-2 mt-2 bg-black bg-opacity-40 inline-flex rounded-lg ">
+            <span className="w-[60%] h-full bg-gradient-to-r rounded-lg from-blue-700 via-pink-500 to-red-600 relative">
+              <span className="absolute  -top-7 right-0">60%</span>
+            </span>
+          </span>
+        </div>
+
+        <div className="mt-14 w-full">
+          <p className="text-sm  font-medium">SQL</p>
+          <span className="w-full h-2 mt-2 bg-black bg-opacity-40 inline-flex rounded-lg ">
+            <span className="w-[85%] h-full bg-gradient-to-r rounded-lg from-blue-700 via-pink-500 to-red-600 relative">
+              <span className="absolute  -top-7 right-0">85%</span>
+            </span>
+          </span>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

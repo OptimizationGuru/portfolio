@@ -3,7 +3,12 @@ import React from 'react';
 import { introduction } from '../../constants';
 import { Cursor, useTypewriter } from 'react-simple-typewriter';
 import { FaFacebookF, FaLinkedin, FaReact, FaTwitter } from 'react-icons/fa';
-import { SiFigma, SiNextdotjs, SiTailwindcss } from 'react-icons/si';
+import {
+  SiJavascript,
+  SiMysql,
+  SiNextdotjs,
+  SiTailwindcss,
+} from 'react-icons/si';
 
 const LeftBanner = () => {
   const [text] = useTypewriter({
@@ -56,19 +61,22 @@ const LeftBanner = () => {
             </div>
           </div>
           <div className="">
-            <h2 className="gap-4 my-4 text-xl">Best skill on</h2>
+            <h2 className="gap-4 my-4 text-xl">Proficient in</h2>
             <div className="flex gap-4">
               <span className="bannerIcon">
-                <FaReact />
+                <SiJavascript />
               </span>
               <span className="bannerIcon">
-                <SiNextdotjs />
+                <FaReact />
               </span>
               <span className="bannerIcon">
                 <SiTailwindcss />
               </span>
               <span className="bannerIcon">
-                <SiFigma />
+                <SiNextdotjs />
+              </span>
+              <span className="bannerIcon">
+                <SiMysql />
               </span>
             </div>
           </div>

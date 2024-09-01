@@ -15,16 +15,44 @@ const Resume = () => {
       </div>
       <div>
         <ul className=" w-full grid grid-cols-4 my-4">
-          <li onClick={() => setShowComponent(1)} className="custom_li">
+          <li
+            onClick={() => setShowComponent(1)}
+            className={
+              showComponent === 1
+                ? `border-designColor border-[1px] rounded-lg custom_li`
+                : `border-none custom_li`
+            }
+          >
             Experience
           </li>
-          <li onClick={() => setShowComponent(2)} className="custom_li">
+          <li
+            onClick={() => setShowComponent(2)}
+            className={
+              showComponent === 2
+                ? `border-designColor border-[1px] rounded-lg  custom_li`
+                : `border-none custom_li`
+            }
+          >
             Skills
           </li>
-          <li onClick={() => setShowComponent(3)} className="custom_li">
+          <li
+            onClick={() => setShowComponent(3)}
+            className={
+              showComponent === 3
+                ? `border-designColor border-[1px] rounded-lg custom_li`
+                : `border-none custom_li`
+            }
+          >
             Education
           </li>
-          <li onClick={() => setShowComponent(4)} className="custom_li">
+          <li
+            onClick={() => setShowComponent(4)}
+            className={
+              showComponent === 4
+                ? `border-designColor border-[1px] rounded-lg  custom_li`
+                : `border-none custom_li`
+            }
+          >
             Achievements
           </li>
         </ul>

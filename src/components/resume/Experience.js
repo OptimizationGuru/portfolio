@@ -1,9 +1,14 @@
 import React from 'react';
 import ResumeCard from './ResumeCard';
+import { motion } from 'framer-motion';
 
 const Experience = () => {
   return (
-    <div className="flex justify-between items-center">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1, transition: { duration: 0.5 } }}
+      className="flex justify-between items-center"
+    >
       <div className="flex flex-col justify-center">
         <div className="py-12 font-titleFont">
           <p className="text-designColor text-sm tracking-[4px]">2007-2019</p>
@@ -65,7 +70,7 @@ const Experience = () => {
           />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
