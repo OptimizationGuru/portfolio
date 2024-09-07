@@ -5,7 +5,7 @@ import ContactRight from './ContactRight';
 
 const Contact = () => {
   return (
-    <div id="contact" className="h-auto w-full pt-[20px]">
+    <div id="contact" className="h-auto w-full pt-[20px] my-[30px] border-b-black border-b-[1px]">
       <div className="flex justify-center items-center text-center pt-8 mt-[10px]">
         <Title title={'CONTACT'} subtitle={'Contact With Me'} />
       </div>

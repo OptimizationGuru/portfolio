@@ -1,6 +1,10 @@
 import React from 'react';
 
-import { introduction } from '../../constants';
+import {
+  github_Profile_link,
+  introduction,
+  linkedIn_Profile_link,
+} from '../../constants';
 import { Cursor, useTypewriter } from 'react-simple-typewriter';
 import { FaGithub, FaLinkedin, FaReact, FaTwitter } from 'react-icons/fa';
 import {
@@ -49,12 +53,26 @@ const LeftBanner = () => {
           <div className="">
             <h2 className="gap-4 my-4 text-xl">Connect with me..</h2>
             <div className="flex gap-4">
-              <span className="bannerIcon">
-                <FaLinkedin />
-              </span>
-              <span className="bannerIcon">
-                <FaGithub />
-              </span>
+              <a
+                href={linkedIn_Profile_link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-blue-700" // Tailwind class to change icon color on hover
+              >
+                <span className="bannerIcon">
+                  <FaLinkedin />
+                </span>
+              </a>
+              <a
+                href={github_Profile_link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-blue-700" // Tailwind class to change icon color on hover
+              >
+                <span className="bannerIcon">
+                  <FaGithub />
+                </span>
+              </a>
               <span className="bannerIcon">
                 <FaTwitter />
               </span>

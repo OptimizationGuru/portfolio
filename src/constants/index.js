@@ -13,3 +13,8 @@ export default navLinkArray;
 
 export const nextStreamDesc =
   'a cutting-edge streaming platform optimized for lightning-fast video loading, utilizing debouncing and caching for efficiency, offering exceptional user experience with real-time search suggestions and a robust live chat feature.';
+
+export const linkedIn_Profile_link =
+  'https://www.linkedin.com/in/shivam-tiwari-iitg';
+
+export const github_Profile_link = 'https://github.com/OptimizationGuru';
