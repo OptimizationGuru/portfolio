@@ -4,6 +4,7 @@ import Banner from './components/banner/Banner';
 import Features from './components/feature/Features';
 import Projects from './components/projects/Projects';
 import Resume from './components/resume/Resume';
+import Contact from './components/contact/Contact';
 // import { Link } from 'react-scroll';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Features />
         <Projects />
         <Resume />
+        <Contact/>
       </div>
     </div>
   );
