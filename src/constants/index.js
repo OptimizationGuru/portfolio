@@ -71,3 +71,24 @@ export const workDescription = [
     icon: <FaCode />,
   },
 ];
+
+export const fieldTypes = [
+  {
+    id: 1,
+    type: 'text',
+    test_func: 'field in not empty',
+    errMsg: 'Field must not be empty',
+  },
+  {
+    id: 2,
+    type: 'phone',
+    test_func: /^\d{10}$/,
+    errMsg: 'Please enter valid phone number',
+  },
+  {
+    id: 3,
+    type: 'email',
+    test_func: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+    errMsg: 'Please enter valid email',
+  },
+];

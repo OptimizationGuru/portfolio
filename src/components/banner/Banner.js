@@ -6,7 +6,7 @@ const Banner = () => {
   return (
     <section
       id="home"
-      className="w-full flex items-center py-10 border-b-[1.5px] border-black font-titleFont"
+      className="w-full flex items-center py-24 border-b-[1.5px] border-black font-titleFont"
     >
       <div className="w-3/5 flex items-center relative justify-center">
         <LeftBanner />
