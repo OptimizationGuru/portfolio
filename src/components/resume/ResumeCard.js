@@ -18,7 +18,7 @@ const ResumeCard = ({ program, timeline, university, grade, desc }) => {
             </p>
           </div>
           <div>
-            <p className="shadow-shadowOne p-3 m-1 text-designColor bg-black bg-opacity-40 rounded-lg">
+            <p className="shadow-shadowOne p-3 m-1 mx-3 text-designColor bg-black bg-opacity-40 rounded-lg">
               {grade}
             </p>
           </div>

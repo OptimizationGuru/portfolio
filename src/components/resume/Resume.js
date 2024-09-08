@@ -14,7 +14,7 @@ const Resume = () => {
         <Title title={'2+ Years of Experience'} subtitle={'Resume'} />
       </div>
       <div>
-        <ul className=" w-full grid grid-cols-4 my-4">
+        <ul className=" w-full grid grid-cols-3 my-4">
           <li
             onClick={() => setShowComponent(1)}
             className={
@@ -45,7 +45,7 @@ const Resume = () => {
           >
             Education
           </li>
-          <li
+          {/* <li
             onClick={() => setShowComponent(4)}
             className={
               showComponent === 4
@@ -54,17 +54,15 @@ const Resume = () => {
             }
           >
             Achievements
-          </li>
+          </li> */}
         </ul>
       </div>
       {showComponent === 1 ? (
         <Experience />
       ) : showComponent === 2 ? (
         <Skills />
-      ) : showComponent === 3 ? (
-        <Education />
       ) : (
-        <Achievement />
+        <Education />
       )}
     </section>
   );
