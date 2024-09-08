@@ -13,8 +13,8 @@ const ResumeCard = ({ program, timeline, university, grade, desc }) => {
           <div>
             <h3 className="font-titleFont text-3xl font-semibold">{program}</h3>
             <p className="text-lg">{university}</p>
-            <p className="text-lg">
-              {desc} ({timeline})
+            <p className="text-lg py-4">
+              {desc} {timeline.length ? `(${timeline})` : ''}
             </p>
           </div>
           <div>
