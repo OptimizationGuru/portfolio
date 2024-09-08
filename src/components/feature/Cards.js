@@ -3,7 +3,7 @@ import { HiArrowRight } from 'react-icons/hi';
 
 const Cards = ({ title, desc, icon }) => {
   return (
-    <div className="w-full h-80 px-12 py-10 rounded-lg  flex items-center shadow-shadowOne bg-gradient-to-r from-bodyColor to-[#202327] group hover:bg-gradient-to-b hover:from-black hover:to-[#1e2024] transition-colors duration-100 group">
+    <div className="w-full h-96 px-6 py-4 rounded-lg  flex items-center shadow-shadowOne bg-gradient-to-r from-bodyColor to-[#202327] group hover:bg-gradient-to-b hover:from-black hover:to-[#1e2024] transition-colors duration-100 group">
       <div className="h-72 overflow-y-hidden">
         <div className="h-full flex flex-col gap-10 translate-y-16 group-hover:translate-y-0 transition-transform duration-500">
           <div className="w-10 h-8 flex flex-col justify-between">

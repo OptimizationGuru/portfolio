@@ -3,6 +3,7 @@ import React from 'react';
 import {
   github_Profile_link,
   introduction,
+  leetcode_Profile_link,
   linkedIn_Profile_link,
 } from '../../constants';
 import { Cursor, useTypewriter } from 'react-simple-typewriter';
@@ -13,6 +14,7 @@ import {
   SiNextdotjs,
   SiTailwindcss,
 } from 'react-icons/si';
+import { TbBrandLeetcode } from 'react-icons/tb';
 
 const LeftBanner = () => {
   const [text] = useTypewriter({
@@ -30,7 +32,7 @@ const LeftBanner = () => {
     >
       <div className="flex flex-col gap-20">
         <div className="flex flex-col gap-5">
-          <h4 className="text-lg font-normal">Welcome to my World!</h4>
+          <h4 className="text-lg font-normal">Warm Welcome..! </h4>
 
           <h1 className="text-6xl font-bold text-white">
             Hi, I'm
@@ -51,7 +53,7 @@ const LeftBanner = () => {
 
         <div className="flex justify-between">
           <div className="">
-            <h2 className="gap-4 my-4 text-xl">Connect with me..</h2>
+            <h2 className="gap-4 my-4 text-xl uppercase">Find me on</h2>
             <div className="flex gap-4">
               <a
                 href={linkedIn_Profile_link}
@@ -73,13 +75,22 @@ const LeftBanner = () => {
                   <FaGithub />
                 </span>
               </a>
-              <span className="bannerIcon">
-                <FaTwitter />
-              </span>
+              <a
+                href={leetcode_Profile_link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-blue-700"
+              >
+                <span className="bannerIcon">
+                  <TbBrandLeetcode />
+                </span>
+              </a>
             </div>
           </div>
           <div className="">
-            <h2 className="gap-4 my-4 text-xl">Proficient in</h2>
+            <h2 className="gap-4 my-4 text-xl uppercase text-current items-center justify-center">
+              Proficient in
+            </h2>
             <div className="flex gap-4">
               <span className="bannerIcon">
                 <SiJavascript />

@@ -1,9 +1,14 @@
+import { SiCodementor, SiMui } from 'react-icons/si';
+import { FaCode } from 'react-icons/fa';
+import { CgPerformance } from 'react-icons/cg';
+import { TiWavesOutline } from 'react-icons/ti';
+import { FcCollaboration } from 'react-icons/fc';
+
 const navLinkArray = [
   { id: 101, title: 'Home', link: 'home' },
   { id: 102, title: 'Features', link: 'feature' },
   { id: 103, title: 'Projects', link: 'projects' },
   { id: 104, title: 'Resume', link: 'resume' },
-  { id: 105, title: 'Testimonial', link: 'testimonial' },
   { id: 106, title: 'Contact', link: 'contact' },
 ];
 
@@ -18,3 +23,51 @@ export const linkedIn_Profile_link =
   'https://www.linkedin.com/in/shivam-tiwari-iitg';
 
 export const github_Profile_link = 'https://github.com/OptimizationGuru';
+export const leetcode_Profile_link = 'https://leetcode.com/u/tiwaribhaiya/';
+
+export const workDescription = [
+  {
+    id: 1,
+    title: 'UI/UX Design',
+    description:
+      'Focuses on translating design concepts into functional and visually appealing user interfaces while ensuring a smooth user experience.',
+    icon: <SiMui />,
+  },
+
+  {
+    id: 2,
+    title: 'Performance Optimization',
+    description:
+      'Specializes in enhancing application performance through techniques like code optimization, caching, and efficient data handling to ensure fast and responsive apps.',
+    icon: <CgPerformance />,
+  },
+
+  {
+    id: 3,
+    title: 'Scalable API Development',
+    description:
+      'Built performant, reliable APIs handling millions of requests daily, ensuring high availability, low latency, and efficient data exchange across distributed systems.',
+    icon: <TiWavesOutline />,
+  },
+  {
+    id: 4,
+    title: 'Collaborations',
+    description:
+      'Led development and cross-functional collaborations for end-to-end project delivery, aligning efforts with business goals and user needs for seamless execution.',
+    icon: <FcCollaboration />,
+  },
+  {
+    id: 5,
+    title: 'Mentoring & Training',
+    description:
+      'Provides guidance and support to interns and junior developers, sharing knowledge and best practices to foster skill development and team growth',
+    icon: <SiCodementor />,
+  },
+  {
+    id: 5,
+    title: 'Code Review & QA',
+    description:
+      'Reviews code contributions to ensure quality, adherence to standards, and identify improvements.',
+    icon: <FaCode />,
+  },
+];

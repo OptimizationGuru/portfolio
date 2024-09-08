@@ -1,6 +1,12 @@
 import React from 'react';
 import { contantImg } from '../../assets';
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import {
+  github_Profile_link,
+  leetcode_Profile_link,
+  linkedIn_Profile_link,
+} from '../../constants';
+import { TbBrandLeetcode } from 'react-icons/tb';
 
 const ContactLeft = () => {
   return (
@@ -30,7 +36,7 @@ const ContactLeft = () => {
           Phone :<span className="text-white"> +91-9954244840</span>
         </p>
         <p className="font-bodyFont text-xl text-gray-400">
-          Email :<span className="text-white">dev.shivamtiwari@gmail.com</span>
+          Email :<span className="text-white"> dev.shivamtiwari@gmail.com</span>
         </p>
       </div>
 
@@ -39,15 +45,36 @@ const ContactLeft = () => {
           Find me on
         </h3>
         <div className="flex gap-4">
-          <span className="bannerIcon">
-            <FaLinkedin />
-          </span>
-          <span className="bannerIcon">
-            <FaGithub />
-          </span>
-          <span className="bannerIcon">
-            <FaTwitter />
-          </span>
+          <a
+            href={linkedIn_Profile_link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-blue-700"
+          >
+            <span className="bannerIcon">
+              <FaLinkedin />
+            </span>
+          </a>
+          <a
+            href={github_Profile_link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-blue-700"
+          >
+            <span className="bannerIcon">
+              <FaGithub />
+            </span>
+          </a>
+          <a
+            href={leetcode_Profile_link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-blue-700"
+          >
+            <span className="bannerIcon">
+              <TbBrandLeetcode />
+            </span>
+          </a>
         </div>
       </div>
     </div>
