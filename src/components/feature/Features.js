@@ -1,8 +1,6 @@
 import React from 'react';
 import Title from './Title';
 import Cards from './Cards';
-import { SiAntdesign, SiProgress } from 'react-icons/si';
-import { FaGlobe, FaMobile } from 'react-icons/fa';
 import { workDescription } from '../../constants';
 
 const Features = () => {

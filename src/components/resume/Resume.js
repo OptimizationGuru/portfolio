@@ -3,7 +3,6 @@ import Title from '../feature/Title';
 import Education from './Education';
 import Experience from './Experience';
 import Skills from './Skills';
-import Achievement from './Achievement';
 
 const Resume = () => {
   const [showComponent, setShowComponent] = useState(1);

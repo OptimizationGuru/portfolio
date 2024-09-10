@@ -75,20 +75,37 @@ export const workDescription = [
 export const fieldTypes = [
   {
     id: 1,
-    type: 'text',
+    type: 'name',
     test_func: 'field in not empty',
-    errMsg: 'Field must not be empty',
+    errMsg: 'Minimum 3 characters',
+    initialError: 'Name field is Empty',
   },
   {
     id: 2,
     type: 'phone',
-    test_func: /^\d{10}$/,
+    test_func: /^[6-9]\d{9}$/,
     errMsg: 'Please enter valid phone number',
+    initialError: 'Phone field is Empty',
   },
   {
     id: 3,
     type: 'email',
     test_func: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
     errMsg: 'Please enter valid email',
+    initialError: 'Email field is Empty',
+  },
+  {
+    id: 4,
+    type: 'subject',
+    test_func: /[^.!?]*[.!?]/,
+    errMsg: 'Subject must be self explainatory',
+    initialError: 'Subject field is Empty',
+  },
+  {
+    id: 5,
+    type: 'message',
+    test_func: /[^.!?]*[.!?]/,
+    errMsg: 'Minimum one complete sentence.',
+    initialError: 'Message field is Empty',
   },
 ];

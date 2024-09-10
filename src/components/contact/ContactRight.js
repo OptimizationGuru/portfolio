@@ -1,58 +1,130 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { fieldTypes } from '../../constants';
+import emailjs from 'emailjs-com';
 
 const ContactRight = () => {
-  function calcHeight(value) {
-    let numberOfLineBreaks = (value.match(/\n/g) || []).length;
+  const [finalFormError, setFinalFormError] = useState('');
 
-    let newHeight = 20 + numberOfLineBreaks * 20 + 12 + 2;
-    return newHeight;
-  }
+  const [formDetails, setFormDetails] = useState({
+    name: '',
+    phone: '',
+    email: '',
+    subject: '',
+    message: '',
+  });
 
-  let textarea = document.getElementById('your_message');
+  const [formErrors, setFormErrors] = useState({
+    name: '',
+    phone: '',
+    email: '',
+    subject: '',
+    message: '',
+  });
 
-  textarea &&
-    textarea.addEventListener('keyup', () => {
-      textarea.style.height = calcHeight(textarea.value) + 'px';
-    });
+  const [formValidity, setFormValidity] = useState({
+    name: false,
+    phone: false,
+    email: false,
+    subject: false,
+    message: false,
+  });
 
-  const sendMail = (e) => {
-    e.preventDefault();
-    const fields = [
-      { id: 'name', regex: null, error: 'Please enter your name' },
-      {
-        id: 'phone',
-        regex: /^\d{10}$/,
-        error: 'Please enter a valid phone number',
-      },
-      {
-        id: 'email',
-        regex: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-        error: 'Please enter a valid email',
-      },
-      { id: 'subject', regex: null, error: 'Please enter a subject' },
-      { id: 'adjust_height', regex: null, error: 'Please enter a message' },
-    ];
+  const ValidateForm = (fieldValue, fieldName) => {
+    let isValid = false;
+    let idx = null;
 
-    let isValid = true;
-    let firstError = null;
+    idx =
+      fieldName === 'phone'
+        ? 1
+        : fieldName === 'email'
+          ? 2
+          : fieldName === 'message'
+            ? 4
+            : fieldName === 'name'
+              ? 0
+              : 3;
 
-    fields.forEach(({ id, regex, error }) => {
-      const input = document.getElementById(id);
-      input?.classList.remove('border-red-500');
-      if (!input?.value || (regex && !regex.test(input?.value))) {
-        input?.classList.add('border-red-500');
-        if (firstError === null) firstError = error;
-        isValid = false;
-      }
-    });
-
-    if (!isValid) {
-      alert(firstError);
-      return;
+    if (idx === 0) {
+      isValid = fieldValue?.length >= 3;
+    } else if (idx === 3) {
+      isValid = fieldValue?.length >= 15;
+    } else {
+      isValid = fieldTypes[idx].test_func.test(fieldValue);
     }
 
-    if (isValid) {
-      alert('Thank you for your message.');
+    setFormValidity((prev) => ({ ...prev, [fieldName]: isValid }));
+
+    setFormErrors((prev) => ({
+      ...prev,
+      [fieldName]: isValid ? '' : idx !== null ? fieldTypes[idx]?.errMsg : '',
+    }));
+
+    setFormDetails((prev) => ({ ...prev, [fieldName]: fieldValue }));
+  };
+
+  const finalValidation = () => {
+    let hasError = false;
+    let finalErrorMessage = '';
+
+    for (const key of Object.keys(formValidity)) {
+      if (!formValidity[key]) {
+        finalErrorMessage = 'Please make sure all fields are valid..';
+        hasError = true;
+        break;
+      }
+    }
+
+    if (hasError) {
+      setFinalFormError(finalErrorMessage);
+      return false;
+    } else {
+      setFinalFormError('');
+      return true;
+    }
+  };
+
+  const sendMail = async (e) => {
+    e.preventDefault();
+
+    const isFormValid = finalValidation();
+
+    if (!isFormValid) return;
+
+    try {
+      const result = await emailjs.send(
+        process.env.REACT_APP_SELF_MAIL_SERVICE_ID,
+        process.env.REACT_APP_SELF_MAIL_TEMPLATE_ID,
+        {
+          from_name: 'Portfolio',
+          user_name: formDetails.name,
+          message: `Subject: ${formDetails.subject}\n\nMessage: ${formDetails.message}`,
+          user_email: `${formDetails.email} : ${formDetails.phone}`,
+        },
+        process.env.REACT_APP_SELF_MAIL_USER_ID
+      );
+
+      const revertResponse = await emailjs.send(
+        process.env.REACT_APP_VISITOR_MAIL_SERVICE_ID,
+        process.env.REACT_APP_VISITOR_MAIL_TEMPLATE_ID,
+        {
+          user_name: formDetails.name,
+          subject: formDetails.subject,
+          message: formDetails.message,
+          from_name: 'Shivam Tiwari',
+          user_email: formDetails.email,
+        },
+        process.env.REACT_APP_VISITOR_MAIL_USER_ID
+      );
+
+      setFormDetails({
+        name: '',
+        phone: '',
+        email: '',
+        subject: '',
+        message: '',
+      });
+    } catch (error) {
+      console.error('Failed to send email', error.text);
     }
   };
 
@@ -70,6 +142,10 @@ const ContactRight = () => {
                   id="name"
                   type="text"
                   className="w-full p-4  bg-[#191B1E]  rounded-lg highlight"
+                  value={formDetails.name}
+                  onChange={(e) => {
+                    ValidateForm(e.target.value, 'name');
+                  }}
                 />
               </div>
             </div>
@@ -82,9 +158,29 @@ const ContactRight = () => {
                 <input
                   id="phone"
                   type="text"
+                  value={formDetails.phone}
+                  onChange={(e) => {
+                    ValidateForm(e.target.value, 'phone');
+                  }}
                   className="w-full p-4 rounded-md bg-[#191B1E]  highlight "
                 />
               </div>
+            </div>
+          </div>
+
+          <div className="flex justify-between px-4 w-full -my-4">
+            <div className="w-[48%] -h-2">
+              {!formValidity.name && (
+                <p className="text-designColor text-xs -pt-[10px]">
+                  {formErrors.name}
+                </p>
+              )}
+            </div>
+
+            <div className="w-[48%] h-4">
+              {!formValidity.phone && (
+                <p className="text-designColor text-xs ">{formErrors.phone}</p>
+              )}
             </div>
           </div>
 
@@ -97,8 +193,17 @@ const ContactRight = () => {
                 <input
                   id="email"
                   type="text"
+                  value={formDetails.email}
+                  onChange={(e) => {
+                    ValidateForm(e.target.value, 'email');
+                  }}
                   className="w-full p-4 rounded-md bg-[#191B1E]  highlight"
                 />
+                {!formValidity.email && (
+                  <p className="text-designColor text-sm py-1">
+                    {formErrors.email}
+                  </p>
+                )}
               </div>
             </div>
           </div>
@@ -112,8 +217,17 @@ const ContactRight = () => {
                 <input
                   id="subject"
                   type="text"
+                  value={formDetails.subject}
+                  onChange={(e) => {
+                    ValidateForm(e.target.value, 'subject');
+                  }}
                   className="w-full p-4 rounded-md bg-[#191B1E] highlight "
                 />
+                {!formValidity.subject && (
+                  <p className="text-designColor text-sm py-1">
+                    {formErrors.subject}
+                  </p>
+                )}
               </div>
             </div>
           </div>
@@ -123,23 +237,36 @@ const ContactRight = () => {
               <div className="w-full">
                 <label className="ml-2">Message</label>
               </div>
-              <div className="w-full">
+
+              <div className="w-full resize-none">
                 <textarea
                   id="your_message"
                   type="text"
-                  className="w-full h-[250px]  p-4 rounded-md  resize-none highlight bg-[#191B1E]"
+                  value={formDetails.message}
+                  onChange={(e) => {
+                    ValidateForm(e.target.value, 'message');
+                  }}
+                  className="w-full h-[250px]  p-4 rounded-md   overflow-auto resize-none highlight bg-[#191B1E]"
                 />
+                {!formValidity.message && (
+                  <p className="text-designColor text-sm py-1">
+                    {formErrors.message}
+                  </p>
+                )}
               </div>
             </div>
           </div>
 
-          <div className="w-full  px-4 py-2">
+          <div className="w-full  px-4 py-2 flex flex-col gap-4">
             <button
               type="submit"
               className="w-full p-4 text-white  rounded-md bg-[#141518]  highlight"
             >
               Submit
             </button>
+            {finalFormError?.length > 0 && (
+              <p className="text-designColor text-sm py-1">{finalFormError}</p>
+            )}
           </div>
         </div>
       </form>

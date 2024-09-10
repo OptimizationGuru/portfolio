@@ -7,7 +7,7 @@ import {
   linkedIn_Profile_link,
 } from '../../constants';
 import { Cursor, useTypewriter } from 'react-simple-typewriter';
-import { FaGithub, FaLinkedin, FaReact, FaTwitter } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaReact } from 'react-icons/fa';
 import {
   SiJavascript,
   SiMysql,
