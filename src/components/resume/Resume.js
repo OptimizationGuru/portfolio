@@ -10,10 +10,11 @@ const Resume = () => {
   return (
     <section id="resume" className="w-full py-20 border-b-[1px] border-b-black">
       <div className="flex justify-center items-center text-center">
-        <Title title={'2+ Years of Experience'} subtitle={'Resume'} />
+        <Title title={'3+ Years of Experience'} subtitle={'Resume'} />
       </div>
+
       <div>
-        <ul className=" w-full grid grid-cols-3 my-4">
+        <ul className="w-full px-1 my-[1px] grid grid-cols-1 md:grid-cols-3 md:my-4">
           <li
             onClick={() => setShowComponent(1)}
             className={

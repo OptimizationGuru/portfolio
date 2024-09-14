@@ -98,7 +98,7 @@ export const fieldTypes = [
     id: 4,
     type: 'subject',
     test_func: /[^.!?]*[.!?]/,
-    errMsg: 'Subject must be self explainatory',
+    errMsg: 'Minimum 50 characters..',
     initialError: 'Subject field is Empty',
   },
   {

@@ -28,7 +28,7 @@ const LeftBanner = () => {
   return (
     <div className="w-full flex flex-col items-start justify-between py-5 text-left md:text-left">
       <div className="flex flex-col gap-5 w-full">
-        <h4 className="text-lg font-normal text-white">Warm Welcome..! </h4>
+        <h4 className="text-lg  text-designColor font-semibold">Warm Welcome..! </h4>
         <h1 className="text-3xl md:text-4xl lg:text-7xl font-bold text-white leading-tight">
           Hi, I'm <span className="text-designColor">Shivam Tiwari</span>
         </h1>

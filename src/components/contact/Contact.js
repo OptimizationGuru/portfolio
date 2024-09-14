@@ -7,19 +7,15 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="h-auto w-full pt-[20px] my-[30px] border-b-black border-b-[1px]"
+      className="h-auto w-full py-[10px] my-[10px] border-b-black border-b-[1px]"
     >
-      <div className="flex justify-center items-center text-center pt-8 mt-[10px]">
-        <Title title={'CONTACT'} subtitle={'Contact With Me'} />
+      <div className="flex justify-center items-center text-center">
+        <Title title={'CONTACT'} subtitle={'Contact Me'} />
       </div>
 
-      <div className="flex justify-between mx-0 -my-1 p-4 ">
-        <div className="w-[40%] p-2 mr-6">
-          <ContactLeft />
-        </div>
-        <div className="w-[55%]">
-          <ContactRight />
-        </div>
+      <div className="grid grid-col-1 px-4 gap-4 my-2 md:gap-12 lg:grid lg:grid-cols-2 lg:gap-">
+        <ContactLeft />
+        <ContactRight />
       </div>
     </div>
   );

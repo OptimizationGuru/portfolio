@@ -129,11 +129,14 @@ const ContactRight = () => {
   };
 
   return (
-    <div className="w-full  my-2 p-3 h-auto shadow-shadowOne text-[#9CA3AF]">
-      <form className="py-4" onSubmit={sendMail}>
+    <div className="w-[100%]  my-2 p-3 h-auto shadow-shadowOne text-[#9CA3AF]">
+      <form
+        className=" py-2 md:py-4"
+        onSubmit={sendMail}
+      >
         <div className="flex flex-col items-center justify-center gap-4 w-full ">
-          <div className="flex justify-between px-4 py-2 w-full">
-            <div className="flex flex-col items-center justify-center gap-2 w-[48%]">
+          <div className="w-full flex flex-col gap-4 md:flex-row md:justify-between px-4 py-2 ">
+            <div className="flex flex-col items-center justify-center gap-2 w-[100%] md:w-[48%]">
               <div className="w-full">
                 <label className="ml-2">Your Name</label>
               </div>
@@ -141,19 +144,27 @@ const ContactRight = () => {
                 <input
                   id="name"
                   type="text"
-                  className="w-full p-4  bg-[#191B1E]  rounded-lg highlight"
+                  className="w-full px-4 py-2 md:p-4  bg-[#191B1E]  rounded-lg highlight"
                   value={formDetails.name}
                   onChange={(e) => {
                     ValidateForm(e.target.value, 'name');
                   }}
                 />
+                <div className="w-full h-[1px]">
+                  {!formValidity.name && (
+                    <p className="text-designColor text-xs text-end -pt-[10px] mr-2 mt-1">
+                      {formErrors.name}
+                    </p>
+                  )}
+                </div>
               </div>
             </div>
 
-            <div className="flex flex-col items-center justify-center gap-2 w-[48%]">
+            <div className="flex flex-col items-center justify-center gap-2 w-[100%] md:w-[48%]">
               <div className="w-full">
                 <label className="ml-2">Phone Number</label>
               </div>
+
               <div className="w-full">
                 <input
                   id="phone"
@@ -162,29 +173,20 @@ const ContactRight = () => {
                   onChange={(e) => {
                     ValidateForm(e.target.value, 'phone');
                   }}
-                  className="w-full p-4 rounded-md bg-[#191B1E]  highlight "
+                  className="w-full px-4 py-2 md:p-4 rounded-md bg-[#191B1E]  highlight "
                 />
+                <div className="w-[100%] h-[1px] mt-[2px]">
+                  {!formValidity.phone && (
+                    <p className="text-designColor text-xs text-end -pt-[10px] ">
+                      {formErrors.phone}
+                    </p>
+                  )}
+                </div>
               </div>
             </div>
           </div>
 
-          <div className="flex justify-between px-4 w-full -my-4">
-            <div className="w-[48%] -h-2">
-              {!formValidity.name && (
-                <p className="text-designColor text-xs -pt-[10px]">
-                  {formErrors.name}
-                </p>
-              )}
-            </div>
-
-            <div className="w-[48%] h-4">
-              {!formValidity.phone && (
-                <p className="text-designColor text-xs ">{formErrors.phone}</p>
-              )}
-            </div>
-          </div>
-
-          <div className="w-full px-4 py-2">
+          <div className="w-full px-4">
             <div className="flex flex-col items-center justify-center gap-2 w-full">
               <div className="w-full">
                 <label className="ml-2">Email</label>
@@ -197,18 +199,20 @@ const ContactRight = () => {
                   onChange={(e) => {
                     ValidateForm(e.target.value, 'email');
                   }}
-                  className="w-full p-4 rounded-md bg-[#191B1E]  highlight"
+                  className="w-full px-4 py-2 md:p-4 rounded-md bg-[#191B1E]  highlight"
                 />
-                {!formValidity.email && (
-                  <p className="text-designColor text-sm py-1">
-                    {formErrors.email}
-                  </p>
-                )}
+                <div className="w-[100%] h-[1px] mt-[2px]">
+                  {!formValidity.email && (
+                    <p className="text-designColor text-xs text-end -pt-[10px] ">
+                      {formErrors.email}
+                    </p>
+                  )}
+                </div>
               </div>
             </div>
           </div>
 
-          <div className="w-full px-4 py-2">
+          <div className="w-full px-4">
             <div className="flex flex-col items-center justify-center gap-2 w-full">
               <div className="w-full">
                 <label className="ml-2">Subject</label>
@@ -221,18 +225,20 @@ const ContactRight = () => {
                   onChange={(e) => {
                     ValidateForm(e.target.value, 'subject');
                   }}
-                  className="w-full p-4 rounded-md bg-[#191B1E] highlight "
+                  className="w-full px-4 py-2 md:p-4 rounded-md bg-[#191B1E] highlight "
                 />
-                {!formValidity.subject && (
-                  <p className="text-designColor text-sm py-1">
-                    {formErrors.subject}
-                  </p>
-                )}
+                <div className="w-[100%] h-[1px] mt-[2px]">
+                  {!formValidity.subject && (
+                    <p className="text-designColor text-xs text-end -pt-[10px] ">
+                      {formErrors.subject}
+                    </p>
+                  )}
+                </div>
               </div>
             </div>
           </div>
 
-          <div className="w-full px-4 py-2">
+          <div className="w-full px-4">
             <div className="flex flex-col items-center justify-center gap-2 w-full">
               <div className="w-full">
                 <label className="ml-2">Message</label>
@@ -246,13 +252,15 @@ const ContactRight = () => {
                   onChange={(e) => {
                     ValidateForm(e.target.value, 'message');
                   }}
-                  className="w-full h-[250px]  p-4 rounded-md   overflow-auto resize-none highlight bg-[#191B1E]"
+                  className="w-full h-[150px] px-4 py-2 md:h-[250px]  md:p-4 rounded-md   overflow-auto resize-none highlight bg-[#191B1E]"
                 />
-                {!formValidity.message && (
-                  <p className="text-designColor text-sm py-1">
-                    {formErrors.message}
-                  </p>
-                )}
+                <div className="w-[100%] h-[1px] mt-[2px]">
+                  {!formValidity.message && (
+                    <p className="text-designColor text-xs text-end -pt-[10px] mr-2 mt-1">
+                      {formErrors.message}
+                    </p>
+                  )}
+                </div>
               </div>
             </div>
           </div>
