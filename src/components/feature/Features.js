@@ -7,7 +7,7 @@ const Features = () => {
   return (
     <section
       id="feature"
-      className="w-full mt-10 py-10 border-b-[1px] border-b-black "
+      className="w-full  py-10 border-b-[1px] border-b-black "
     >
       <div className=" flex flex-col gap-8">
         <Title title={'Features'} subtitle={'What I Do'} />

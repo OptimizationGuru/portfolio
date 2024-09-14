@@ -8,15 +8,15 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="w-full py-20 border-b-[1px] border-b-black"
+      className="w-full py-10 border-b-[1px] border-b-black"
     >
-      <div className="flex justify-center items-center text-center">
+      <div className="flex justify-center items-center text-center mb-9">
         <Title
-          title={'View my Projects and drop your feedback'}
+          title={'View my Projects & drop your feedback'}
           subtitle={'My Projects'}
         />
       </div>
-      <div className="grid grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 px-4 gap-4 md:grid-cols-2 md:gap-12 md:px-2 lg:grid-cols-3 lg:gap-6">
         <ProjectCard title={'NETFLIXGPT'} desc={'XXXXXX'} img={projectOne} />
         <ProjectCard
           title={'NEXTSTREAM'}
