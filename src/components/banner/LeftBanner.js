@@ -28,7 +28,9 @@ const LeftBanner = () => {
   return (
     <div className="w-full flex flex-col items-start justify-between py-5 text-left md:text-left">
       <div className="flex flex-col gap-5 w-full">
-        <h4 className="text-lg  text-designColor font-semibold">Warm Welcome..! </h4>
+        <h4 className="text-lg  text-designColor font-semibold">
+         !! Namaskaram 🙏 !!{' '}
+        </h4>
         <h1 className="text-3xl md:text-4xl lg:text-7xl font-bold text-white leading-tight">
           Hi, I'm <span className="text-designColor">Shivam Tiwari</span>
         </h1>
@@ -45,18 +47,24 @@ const LeftBanner = () => {
           <div className="flex gap-4 mt-2">
             <a
               href={linkedIn_Profile_link}
+              target="_blank"
+              rel="noopener noreferrer"
               className="bannerIcon hover:text-blue-500 transition-transform transform hover:scale-110"
             >
               <FaLinkedin />
             </a>
             <a
               href={github_Profile_link}
+              target="_blank"
+              rel="noopener noreferrer"
               className="bannerIcon hover:text-blue-500 transition-transform transform hover:scale-110"
             >
               <FaGithub />
             </a>
             <a
               href={leetcode_Profile_link}
+              target="_blank"
+              rel="noopener noreferrer"
               className="bannerIcon hover:text-blue-500 transition-transform transform hover:scale-110"
             >
               <TbBrandLeetcode />

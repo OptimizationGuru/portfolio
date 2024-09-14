@@ -25,7 +25,7 @@ const ContactLeft = () => {
         </h3>
 
         <p className="font-bodyFont text-xl text-gray-400 text-wrap">
-          Full-Stack Developer | Building Scalable, Performant Web Apps | 🚀
+          Full-Stack Developer | Building Scalable Performant Web App 🚀
         </p>
         <p className="font-bodyFont text-xl text-gray-400">
           I specialize in developing robust web solutions using modern
