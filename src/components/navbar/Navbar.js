@@ -2,15 +2,13 @@ import React, { useState } from 'react';
 import { bannerImg } from '../../assets/index';
 import navLinkArray from '../../constants';
 import { Link } from 'react-scroll';
-import { FiMenu, FiX } from 'react-icons/fi'; // Icons for hamburger and close
+import { FiMenu, FiX } from 'react-icons/fi';
 
 const Navbar = () => {
-  // State to manage the visibility of the sidebar
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   return (
     <div className="w-full sticky top-0 z-50 flex justify-between items-center py-4 px-4 font-titleFont border-b-[1px] border-b-gray-100 bg-bodyColor">
-      {/* Logo and Title */}
       <div className="flex items-center gap-2">
         <img
           src={bannerImg}
@@ -22,7 +20,6 @@ const Navbar = () => {
         </p>
       </div>
 
-      {/* Hamburger icon for mobile */}
       <div className="sm:hidden">
         <button
           onClick={() => setIsSidebarOpen(!isSidebarOpen)}
@@ -32,7 +29,6 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Sidebar for mobile */}
       <div
         className={`fixed top-0 left-0 h-full w-64 bg-bodyColor shadow-lg transform ${
           isSidebarOpen ? 'translate-x-0' : '-translate-x-full'
@@ -49,7 +45,7 @@ const Navbar = () => {
               Shivam
             </p>
           </div>
-          {/* Close icon */}
+
           <button
             onClick={() => setIsSidebarOpen(false)}
             className="text-2xl text-gray-400 focus:outline-none"
@@ -58,7 +54,6 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Sidebar Navigation Links */}
         <ul className="flex flex-col items-start p-4">
           {navLinkArray.map(({ id, title, link }) => (
             <li
@@ -72,7 +67,7 @@ const Navbar = () => {
                 smooth={true}
                 offset={-70}
                 duration={500}
-                onClick={() => setIsSidebarOpen(false)} // Close sidebar when link is clicked
+                onClick={() => setIsSidebarOpen(false)}
               >
                 {title}
               </Link>
@@ -81,7 +76,6 @@ const Navbar = () => {
         </ul>
       </div>
 
-      {/* Overlay to close sidebar when clicking outside */}
       {isSidebarOpen && (
         <div
           className="fixed inset-0 bg-black opacity-50 z-30"
