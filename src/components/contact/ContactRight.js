@@ -91,7 +91,7 @@ const ContactRight = () => {
     if (!isFormValid) return;
 
     try {
-      const result = await emailjs.send(
+      await emailjs.send(
         process.env.REACT_APP_SELF_MAIL_SERVICE_ID,
         process.env.REACT_APP_SELF_MAIL_TEMPLATE_ID,
         {
@@ -103,7 +103,7 @@ const ContactRight = () => {
         process.env.REACT_APP_SELF_MAIL_USER_ID
       );
 
-      const revertResponse = await emailjs.send(
+      await emailjs.send(
         process.env.REACT_APP_VISITOR_MAIL_SERVICE_ID,
         process.env.REACT_APP_VISITOR_MAIL_TEMPLATE_ID,
         {

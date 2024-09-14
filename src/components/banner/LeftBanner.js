@@ -18,7 +18,7 @@ import { TbBrandLeetcode } from 'react-icons/tb';
 
 const LeftBanner = () => {
   const [text] = useTypewriter({
-    words: ['Professional Coder', 'Full Stack Developer', 'UI Designer'],
+    words: ['Professional Coder', 'Frontend Developer', 'UI Designer'],
     loop: true,
     typeSpeed: 20,
     deleteSpeed: 10,
@@ -26,93 +26,66 @@ const LeftBanner = () => {
   });
 
   return (
-    <section
-      id="home"
-      className="w-full flex items-center py-10 font-titleFont"
-    >
-      <div className="flex flex-col gap-20">
-        <div className="flex flex-col gap-5">
-          <h4 className="text-lg font-normal">Warm Welcome..! </h4>
+    <div className="w-full flex flex-col items-start justify-between py-5 text-left md:text-left">
+      <div className="flex flex-col gap-5 w-full">
+        <h4 className="text-lg font-normal text-white">Warm Welcome..! </h4>
+        <h1 className="text-3xl md:text-4xl lg:text-7xl font-bold text-white leading-tight">
+          Hi, I'm <span className="text-designColor">Shivam Tiwari</span>
+        </h1>
+        <h2 className="text-3xl md:text-4xl font-bold text-white">
+          a <span>{text}</span>
+          <Cursor cursorBlinking={true} cursorStyle="I" cursorColor="#ff014f" />
+        </h2>
+        <p className="text-lg font-semibold text-gray-300">{introduction}</p>
+      </div>
 
-          <h1 className="text-6xl font-bold text-white">
-            Hi, I'm
-            <span className="text-6xl   text-designColor"> Shivam Tiwari</span>
-          </h1>
-
-          <h2 className="font-bold text-4xl text-white">
-            {' '}
-            a <span>{text}. </span>
-            <Cursor
-              cursorBlinking={true}
-              cursorStyle="I"
-              cursorColor="#ff014f"
-            />
-          </h2>
-          <p className="font-semibold text-lg">{introduction}</p>
+      <div className="flex flex-col md:flex-row md:justify-between gap-8 md:gap-20 lg:gap-60 mt-10">
+        <div>
+          <h2 className="text-xl uppercase text-white">Find me on</h2>
+          <div className="flex gap-4 mt-2">
+            <a
+              href={linkedIn_Profile_link}
+              className="bannerIcon hover:text-blue-500 transition-transform transform hover:scale-110"
+            >
+              <FaLinkedin />
+            </a>
+            <a
+              href={github_Profile_link}
+              className="bannerIcon hover:text-blue-500 transition-transform transform hover:scale-110"
+            >
+              <FaGithub />
+            </a>
+            <a
+              href={leetcode_Profile_link}
+              className="bannerIcon hover:text-blue-500 transition-transform transform hover:scale-110"
+            >
+              <TbBrandLeetcode />
+            </a>
+          </div>
         </div>
 
-        <div className="flex justify-between">
-          <div className="">
-            <h2 className="gap-4 my-4 text-xl uppercase">Find me on</h2>
-            <div className="flex gap-4">
-              <a
-                href={linkedIn_Profile_link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-blue-700" // Tailwind class to change icon color on hover
-              >
-                <span className="bannerIcon">
-                  <FaLinkedin />
-                </span>
-              </a>
-              <a
-                href={github_Profile_link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-blue-700" // Tailwind class to change icon color on hover
-              >
-                <span className="bannerIcon">
-                  <FaGithub />
-                </span>
-              </a>
-              <a
-                href={leetcode_Profile_link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-blue-700"
-              >
-                <span className="bannerIcon">
-                  <TbBrandLeetcode />
-                </span>
-              </a>
-            </div>
-          </div>
-          <div className="">
-            <h2 className="gap-4 my-4 text-xl uppercase text-current items-center justify-center">
-              Proficient in
-            </h2>
-            <div className="flex gap-4">
-              <span className="bannerIcon">
-                <SiJavascript />
-              </span>
-              <span className="bannerIcon">
-                <FaReact />
-              </span>
-              <span className="bannerIcon">
-                <SiTailwindcss />
-              </span>
-              <span className="bannerIcon">
-                <SiNextdotjs />
-              </span>
-              <span className="bannerIcon">
-                <SiMysql />
-              </span>
-            </div>
+        <div>
+          <h2 className="text-xl uppercase text-white">Proficient in</h2>
+          <div className="flex gap-4 mt-2">
+            <span className="bannerIcon hover:text-yellow-500 transition-transform transform hover:scale-110">
+              <SiJavascript />
+            </span>
+            <span className="bannerIcon hover:text-blue-500 transition-transform transform hover:scale-110">
+              <FaReact />
+            </span>
+            <span className="bannerIcon hover:text-green-500 transition-transform transform hover:scale-110">
+              <SiTailwindcss />
+            </span>
+            <span className="bannerIcon hover:text-black transition-transform transform hover:scale-110">
+              <SiNextdotjs />
+            </span>
+            <span className="bannerIcon hover:text-blue-500 transition-transform transform hover:scale-110">
+              <SiMysql />
+            </span>
           </div>
         </div>
       </div>
-      <div className="w-1/2"></div>
-    </section>
+    </div>
   );
 };
 

@@ -3,15 +3,12 @@ import { bannerImg } from '../../assets/index';
 
 const RightBannner = () => {
   return (
-    <div>
-      <div className="w-full flex justify-center items-center relative -mt-12">
-        <img
-          src={bannerImg}
-          alt="banner-img"
-          className="w-[400px] h-[400px] z-10 rounded-[2rem] "
-        />
-        <div className="absolute -right-16 w-[400px] h-[550px] rounded-[1.5rem] shadow-shadowOne  bg-gradient-to-r from-[#1e2024] to-[#202327] flex justify-center items-center"></div>
-      </div>
+    <div className="flex  justify-center items-center relative mt-6 md:mt-0  p-3 rounded-xl">
+      <img
+        src={bannerImg}
+        alt="banner-img"
+        className="w-[220px] h-[220px] md:w-[290px] md:h-[290px] lg:w-[400px] lg:h-[400px] z-10 rounded-xl shadow-lg"
+      />
     </div>
   );
 };
