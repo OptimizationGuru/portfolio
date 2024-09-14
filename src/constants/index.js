@@ -134,3 +134,22 @@ export const work_desc4 = [
   '🌟 Led onboarding and knowledge transfer for interns and new hires, providing guidance to ensure a smooth transition and quick integration into the team',
   '🌟 Conducted thorough code reviews, ensuring adherence to best practices, optimized performance, and maintainability across the team.',
 ];
+
+export const projectLinks = [
+  {
+    id: 1,
+    liveUrl: 'https://netflixgpt-3cb4b.web.app/',
+    githubUrl: 'https://github.com/OptimizationGuru/netflix-gpt/',
+  },
+  {
+    id: 2,
+    liveUrl: 'https://netflixgpt-3cb4b.web.app/',
+    githubUrl: 'https://github.com/OptimizationGuru/echoview',
+  },
+
+  {
+    id: 3,
+    liveUrl: 'https://netflixgpt-3cb4b.web.app/',
+    githubUrl: 'https://github.com/OptimizationGuru/portfolio',
+  },
+];

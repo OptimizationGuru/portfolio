@@ -8,7 +8,8 @@ const Navbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   return (
-    <div className="w-full sticky top-0 z-50 flex justify-between items-center py-4 px-4 font-titleFont border-b-[1px] border-b-gray-100 bg-bodyColor">
+    <div className="w-full sticky top-0 z-50 flex justify-around items-center py-4 px-2 md:px-10 font-titleFont border-b-[1px] border-b-gray-100 bg-bodyColor">
+      {/* Logo and Title */}
       <div className="flex items-center gap-2">
         <img
           src={bannerImg}
@@ -20,7 +21,31 @@ const Navbar = () => {
         </p>
       </div>
 
-      <div className="sm:hidden">
+      {/* Navbar Links (visible on medium and larger screens) */}
+      <div className="hidden md:flex flex-grow justify-center">
+        <ul className="flex space-x-6">
+          {navLinkArray.map(({ id, title, link }) => (
+            <li
+              key={id}
+              className="text-lg text-gray-400 hover:text-designColor duration-300"
+            >
+              <Link
+                activeClass="active"
+                to={link}
+                spy={true}
+                smooth={true}
+                offset={-70} // Adjust this offset based on header height
+                duration={500}
+              >
+                {title}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {/* Hamburger Menu (visible on mobile) */}
+      <div className="md:hidden">
         <button
           onClick={() => setIsSidebarOpen(!isSidebarOpen)}
           className="text-3xl text-gray-400 focus:outline-none"
@@ -29,6 +54,7 @@ const Navbar = () => {
         </button>
       </div>
 
+      {/* Sidebar (visible on mobile) */}
       <div
         className={`fixed top-0 left-0 h-full w-64 bg-bodyColor shadow-lg transform ${
           isSidebarOpen ? 'translate-x-0' : '-translate-x-full'
@@ -76,6 +102,7 @@ const Navbar = () => {
         </ul>
       </div>
 
+      {/* Overlay for Sidebar (visible when sidebar is open) */}
       {isSidebarOpen && (
         <div
           className="fixed inset-0 bg-black opacity-50 z-30"
