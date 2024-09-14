@@ -1,6 +1,5 @@
 import React from 'react';
 import { FaGithub, FaGlobe } from 'react-icons/fa';
-import { linkedIn_Profile_link, projectLinks } from '../../constants';
 
 const ProjectCard = ({ title, desc, img, liveUrl, githubUrl }) => {
   return (
