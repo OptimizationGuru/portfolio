@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ProjectCard = ({ title, desc }) => {
+const ProjectCard = ({ title, desc, icon }) => {
   return (
     <div className="w-full flex group ">
       <div className="relative w-10 h-[6px] mt-16 bgOpacity">
@@ -9,10 +9,25 @@ const ProjectCard = ({ title, desc }) => {
         </span>
       </div>
       <div className="w-full bg-black bg-opacity-20 hover:bg-opacity-30 duration-300 px-10 py-16 gap-4 shadow-shadowOne rounded-lg flex flex-col justify-center">
-        {/* <div className="flex justify-between"> */}
         <div>
-          <h3 className="font-titleFont text-xl lg:text-3xl font-semibold">{title}</h3>
-          <p className="text-sm lg:text-lg py-4">{desc}</p>
+          <div className="flex gap-2">
+            <div className="mt-2 ml-2">{icon}</div>
+            <h3 className="font-titleFont text-xl lg:text-3xl font-semibold">
+              {title}
+            </h3>
+          </div>
+
+          <div className="flex flex-col py-1">
+            {desc.length > 0 &&
+              desc.map((bullet, idx) => (
+                <div
+                  className="py-1 px-3 text-start justify-start items-start"
+                  key={idx}
+                >
+                  {bullet}
+                </div>
+              ))}
+          </div>
         </div>
         {/* </div> */}
       </div>

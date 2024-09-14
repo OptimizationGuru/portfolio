@@ -109,3 +109,28 @@ export const fieldTypes = [
     initialError: 'Message field is Empty',
   },
 ];
+
+export const work_desc = [
+  '🌟 Enabled 60s battery swaps, improving efficiency by 30%.',
+  '🌟 Reduced wait times by 40%, raising customer satisfaction 25%.',
+  '🌟 Ensured 99% uptime with industry-best frontend practices.',
+];
+
+export const work_desc2 = [
+  '🌟 Built KML parser to convert cluster boundaries into H3 hexagons using Uber’s H3 Index.',
+  '🌟 Integrated H3 hexagon data into Google Maps for precise boundary visualization',
+  '🌟 Enabled boundary modification directly on the map, simplifying cluster management.',
+  '🌟 Contributed to business expansion, adding 2M INR in annual revenue.',
+];
+
+export const work_desc3 = [
+  '🌟 Built and maintained a dynamic, responsive web app using React, TypeScript, TailwindCSS for seamless user experience.',
+  '🌟 Top-Performant: Implemented lazy loading, code-splitting, debouncing, throttling, and caching for fast, scalable features.',
+  '🌟 State Management: Managed Data & UI Layers using Redux Toolkit, improving scalability & data flow consistency.',
+  '🌟 Responsive Design: Worked closely with UX/UI designers to implement mobile-first, pixel-perfect designs.',
+];
+
+export const work_desc4 = [
+  '🌟 Led onboarding and knowledge transfer for interns and new hires, providing guidance to ensure a smooth transition and quick integration into the team',
+  '🌟 Conducted thorough code reviews, ensuring adherence to best practices, optimized performance, and maintainability across the team.',
+];
