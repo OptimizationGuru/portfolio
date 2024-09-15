@@ -3,7 +3,6 @@ import Title from '../feature/Title';
 import ProjectCard from './ProjectCard';
 import { projectOne, projectTwo } from '../../assets';
 import {
-  nextStreamDesc,
   projectLinks,
   projectMovieStoreBullets,
   projectNextStreamDBullets,
