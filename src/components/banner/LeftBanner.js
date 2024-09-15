@@ -38,7 +38,7 @@ const LeftBanner = () => {
           a <span>{text}</span>
           <Cursor cursorBlinking={true} cursorStyle="I" cursorColor="#ff014f" />
         </h2>
-        <p className="text-lg font-semibold text-gray-300">{introduction}</p>
+        <p className="text-lg text-gray-300">{introduction}</p>
       </div>
 
       <div className="flex flex-col md:flex-row md:justify-between gap-8 md:gap-20 lg:gap-60 mt-10">

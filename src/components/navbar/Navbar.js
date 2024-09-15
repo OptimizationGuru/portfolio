@@ -27,7 +27,7 @@ const Navbar = () => {
           {navLinkArray.map(({ id, title, link }) => (
             <li
               key={id}
-              className="text-lg text-gray-400 hover:text-designColor duration-300"
+              className="text-lg text-gray-400 hover:text-designColor duration-300 cursor-pointer"
             >
               <Link
                 activeClass="active"
