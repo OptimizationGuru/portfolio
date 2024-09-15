@@ -3,8 +3,7 @@ import { FaGithub, FaGlobe } from 'react-icons/fa';
 
 const ProjectCard = ({ title, desc, img, liveUrl, githubUrl }) => {
   return (
-    <div className="w-full h-[600px] md:h-[500px] lg:h-auto py-10 px-12 rounded-lg shadow-shadowOne flex flex-col bg-gradient-to-r from-bodyColor to-[#202327] group hover:bg-gradient-to-b hover:from-gray-900 hover:gray-900 transition-colors duration-1000">
-      {/* <div className="flex flex-col gap-8 justify-center items-center"> */}
+    <div className="w-full h-[600px] md:h-[500px] lg:h-auto py-10 px-8 rounded-lg shadow-shadowOne flex flex-col bg-gradient-to-r from-bodyColor to-[#202327] group hover:bg-gradient-to-b hover:from-gray-900 hover:gray-900 transition-colors duration-1000">
       <div className="w-full h-[80%] overflow-hidden rounded-lg flex flex-col gap-6">
         <img
           src={img}
@@ -38,7 +37,6 @@ const ProjectCard = ({ title, desc, img, liveUrl, githubUrl }) => {
         ))}
       </div>
     </div>
-    // </div>
   );
 };
 

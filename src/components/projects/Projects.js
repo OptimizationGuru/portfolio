@@ -13,7 +13,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="w-full py-10 border-b-[1px] border-b-black"
+      className="w-full py-10 border-b-[1px] border-b-black "
     >
       <div className="flex justify-center items-center text-center mb-9">
         <Title
@@ -21,31 +21,34 @@ const Projects = () => {
           subtitle={'My Projects'}
         />
       </div>
-      <div className="grid grid-cols-1 px-4 gap-4 md:gap-6 md:mx-10 md:px-12 md:w-[85%] md:justify-center-center lg:grid-cols-3 lg:gap-6">
-        <ProjectCard
-          title={'NETFLIXGPT'}
-          desc={projectNextStreamDBullets}
-          img={projectOne}
-          liveUrl={projectLinks[0].liveUrl}
-          githubUrl={projectLinks[0].githubUrl}
-        />
-        <ProjectCard
-          title={'NEXTSTREAM'}
-          desc={projectMovieStoreBullets}
-          img={projectTwo}
-          liveUrl={projectLinks[1].liveUrl}
-          githubUrl={projectLinks[1].githubUrl}
-        />
-        <ProjectCard
-          title={'Cravings'}
-          desc={projectPortfolioBullets}
-          img={projectOne}
-          liveUrl={projectLinks[2].liveUrl}
-          githubUrl={projectLinks[2].githubUrl}
-        />
-        {/* <ProjectCard title={'FlipStory'} desc={'XXXXXX'} img={projectTwo} />
-        <ProjectCard title={'Project 5'} desc={'XXXXXX'} img={projectOne} />
-        <ProjectCard title={'Project 6'} desc={'XXXXXX'} img={projectTwo} /> */}
+      <div className="grid grid-cols-1 items-center px-4 gap-5 md:gap-8 md:px-20 md:w-[85%] md:justify-center md:mx-4 lg:w-[90%] lg:grid-cols-2 lg:gap-12 lg:items-center lg:justify-center lg:text-center lg:px-4 xl:w-[70%] xl:ml-36">
+        <div className="w-[100%] items-center justify-center text-left md:ml-10 ">
+          <ProjectCard
+            title={'NETFLIXGPT'}
+            desc={projectNextStreamDBullets}
+            img={projectOne}
+            liveUrl={projectLinks[0].liveUrl}
+            githubUrl={projectLinks[0].githubUrl}
+          />
+        </div>
+        <div className="w-[100%] items-center justify-center text-left md:ml-10">
+          <ProjectCard
+            title={'NEXTSTREAM'}
+            desc={projectMovieStoreBullets}
+            img={projectTwo}
+            liveUrl={projectLinks[1].liveUrl}
+            githubUrl={projectLinks[1].githubUrl}
+          />
+        </div>
+        <div className="w-[100%] items-center justify-center text-left md:ml-10">
+          <ProjectCard
+            title={'Cravings'}
+            desc={projectPortfolioBullets}
+            img={projectOne}
+            liveUrl={projectLinks[2].liveUrl}
+            githubUrl={projectLinks[2].githubUrl}
+          />
+        </div>
       </div>
     </section>
   );
