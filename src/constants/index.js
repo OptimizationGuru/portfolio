@@ -30,7 +30,7 @@ export const workDescription = [
     id: 1,
     title: 'UI/UX Design',
     description:
-      'Focuses on translating design concepts into functional and visually appealing user interfaces while ensuring a smooth user experience.',
+      'Translates design concepts into functional, visually appealing interfaces for seamless user experiences..',
     icon: <SiMui />,
   },
 
@@ -38,7 +38,7 @@ export const workDescription = [
     id: 2,
     title: 'Performance Optimization',
     description:
-      'Specializes in enhancing application performance through techniques like code optimization, caching, and efficient data handling to ensure fast and responsive apps.',
+      'Specializes in optimal app performance with code optimization, caching, debouncing, throttling, API polling, and Redux-based state management.',
     icon: <CgPerformance />,
   },
 
@@ -46,21 +46,21 @@ export const workDescription = [
     id: 3,
     title: 'Scalable API Development',
     description:
-      'Built performant, reliable APIs handling millions of requests daily, ensuring high availability, low latency, and efficient data exchange across distributed systems.',
+      'Built high-performance APIs handling millions of requests daily, ensuring low latency, high availability, and efficient data exchange across distributed systems.',
     icon: <TiWavesOutline />,
   },
   {
     id: 4,
     title: 'Collaborations',
     description:
-      'Led development and cross-functional collaborations for end-to-end project delivery, aligning efforts with business goals and user needs for seamless execution.',
+      'Led development and cross-functional teams to deliver projects aligned with business goals and user needs for seamless execution..',
     icon: <FcCollaboration />,
   },
   {
     id: 5,
     title: 'Mentoring & Training',
     description:
-      'Provides guidance and support to interns and junior developers, sharing knowledge and best practices to foster skill development and team growth',
+      'Mentors interns and junior developers, sharing knowledge and best practices to foster skill development and team growth.',
     icon: <SiCodementor />,
   },
   {
@@ -124,10 +124,9 @@ export const work_desc2 = [
 ];
 
 export const work_desc3 = [
-  '🌟 Built and maintained a dynamic, responsive web app using React, TypeScript, TailwindCSS for seamless user experience.',
-  '🌟 Top-Performant: Implemented lazy loading, code-splitting, debouncing, throttling, and caching for fast, scalable features.',
-  '🌟 State Management: Managed Data & UI Layers using Redux Toolkit, improving scalability & data flow consistency.',
-  '🌟 Responsive Design: Worked closely with UX/UI designers to implement mobile-first, pixel-perfect designs.',
+  '🌟 Built a dynamic, responsive web app with React, TypeScript, and TailwindCSS for a seamless user experience.',
+  '🌟 Top-Performant: Applied lazy loading, code-splitting, debouncing, throttling, and caching for fast, scalable features.',
+  '🌟 State Management: Optimized data flow with Redux Toolkit for scalability and consistency.',
 ];
 
 export const work_desc4 = [
@@ -151,5 +150,65 @@ export const projectLinks = [
     id: 3,
     liveUrl: 'https://netflixgpt-3cb4b.web.app/',
     githubUrl: 'https://github.com/OptimizationGuru/portfolio',
+  },
+];
+
+export const projectNextStreamDBullets = [
+  {
+    id: 1,
+    desc: '🌟 Cutting-edge streaming platform optimized for lightning-fast video loading.',
+  },
+  {
+    id: 2,
+    desc: '🌟 Utilized code-splitting, lazy-loading, debouncing and caching for efficiency.',
+  },
+
+  {
+    id: 3,
+    desc: ' 🌟 Delivered exceptional user experience with real-time search suggestions',
+  },
+  {
+    id: 4,
+    desc: ' 🌟 Integrated a robust live chat feature with api polling',
+  },
+];
+
+export const projectMovieStoreBullets = [
+  {
+    id: 1,
+    desc: '🌟 Cutting-edge streaming platform optimized for lightning-fast video loading.',
+  },
+  {
+    id: 2,
+    desc: '🌟 Utilized code-splitting, lazy-loading, debouncing and caching for efficiency.',
+  },
+
+  {
+    id: 3,
+    desc: ' 🌟 Delivered exceptional user experience with real-time search suggestions',
+  },
+  {
+    id: 4,
+    desc: ' 🌟 Integrated a robust live chat feature with api polling',
+  },
+];
+
+export const projectPortfolioBullets = [
+  {
+    id: 1,
+    desc: '🌟 Cutting-edge streaming platform optimized for lightning-fast video loading.',
+  },
+  {
+    id: 2,
+    desc: '🌟 Utilized code-splitting, lazy-loading, debouncing and caching for efficiency.',
+  },
+
+  {
+    id: 3,
+    desc: ' 🌟 Delivered exceptional user experience with real-time search suggestions',
+  },
+  {
+    id: 4,
+    desc: ' 🌟 Integrated a robust live chat feature with api polling',
   },
 ];

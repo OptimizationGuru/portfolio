@@ -19,7 +19,7 @@ const Experience = () => {
           <h2 className="text-4xl font-bold">Challenging Projects</h2>
         </div>
 
-        <div className="w-[95%] lg:w-[100%] border-black border-l-[6px] border-opacity-30 flex flex-col gap-4">
+        <div className="w-[100%] lg:w-[100%] border-black border-l-[6px] border-opacity-30 flex flex-col gap-4">
           <ProjectCard title={'⏰ 60 Seconds Swap'} desc={work_desc} />
           <ProjectCard
             title={'Yuma Clusters Feature'}
@@ -40,8 +40,8 @@ const Experience = () => {
 
         <div className="w-[95%] lg:w-[100%] border-black border-l-[6px] border-opacity-30 flex flex-col gap-4">
           {/* <ProjectCard title={'Smart Onboarding System'} desc={work_desc} /> */}
-          <ProjectCard title={'Optimum Development'} desc={work_desc3} />
-          <ProjectCard title={'Leadership & Code Review'} desc={work_desc4} />
+          <ProjectCard title={'Optimum webapp'} desc={work_desc3} />
+          <ProjectCard title={'Leadership'} desc={work_desc4} />
         </div>
       </div>
     </motion.div>

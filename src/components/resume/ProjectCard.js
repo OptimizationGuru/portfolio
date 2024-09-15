@@ -12,7 +12,7 @@ const ProjectCard = ({ title, desc, icon }) => {
         <div>
           <div className="flex gap-2">
             <div className="mt-2 ml-2">{icon}</div>
-            <h3 className="font-titleFont text-xl lg:text-3xl font-semibold">
+            <h3 className="font-titleFont text-lg pb-4 md:text-3xl font-semibold">
               {title}
             </h3>
           </div>

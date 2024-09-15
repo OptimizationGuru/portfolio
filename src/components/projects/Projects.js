@@ -2,7 +2,13 @@ import React from 'react';
 import Title from '../feature/Title';
 import ProjectCard from './ProjectCard';
 import { projectOne, projectTwo } from '../../assets';
-import { nextStreamDesc, projectLinks } from '../../constants';
+import {
+  nextStreamDesc,
+  projectLinks,
+  projectMovieStoreBullets,
+  projectNextStreamDBullets,
+  projectPortfolioBullets,
+} from '../../constants';
 
 const Projects = () => {
   return (
@@ -16,24 +22,24 @@ const Projects = () => {
           subtitle={'My Projects'}
         />
       </div>
-      <div className="grid grid-cols-1 px-4 gap-4 md:grid-cols-2 md:gap-12 md:px-2 lg:grid-cols-3 lg:gap-6">
+      <div className="grid grid-cols-1 px-4 gap-4 md:gap-6 md:mx-10 md:px-12 md:w-[85%] md:justify-center-center lg:grid-cols-3 lg:gap-6">
         <ProjectCard
           title={'NETFLIXGPT'}
-          desc={'XXXXXX'}
+          desc={projectNextStreamDBullets}
           img={projectOne}
           liveUrl={projectLinks[0].liveUrl}
           githubUrl={projectLinks[0].githubUrl}
         />
         <ProjectCard
           title={'NEXTSTREAM'}
-          desc={nextStreamDesc}
+          desc={projectMovieStoreBullets}
           img={projectTwo}
           liveUrl={projectLinks[1].liveUrl}
           githubUrl={projectLinks[1].githubUrl}
         />
         <ProjectCard
           title={'Cravings'}
-          desc={'XXXXXX'}
+          desc={projectPortfolioBullets}
           img={projectOne}
           liveUrl={projectLinks[2].liveUrl}
           githubUrl={projectLinks[2].githubUrl}

@@ -28,9 +28,14 @@ const ProjectCard = ({ title, desc, img, liveUrl, githubUrl }) => {
         </div>
       </div>
       <div>
-        <p className="ext-sm tracking-wide mt-3 hover:text-gray-100 duration-300">
-          {desc}
-        </p>
+        {desc.map((bullet) => (
+          <p
+            key={bullet.id}
+            className="ext-sm tracking-wide mt-3 hover:text-gray-100 duration-300"
+          >
+            {bullet.desc}
+          </p>
+        ))}
       </div>
     </div>
     // </div>
