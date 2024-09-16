@@ -3,7 +3,7 @@ import { bannerImg } from '../../assets/index';
 
 const RightBannner = () => {
   return (
-    <div className="flex pb-4 mb-4  justify-center items-center relative mt-6 md:mt-0  p-3 rounded-xl">
+    <div className=" hidden md:flex pb-4 mb-4  justify-center items-center relative mt-6 md:mt-0  p-3 rounded-xl">
       <img
         src={bannerImg}
         alt="banner-img"

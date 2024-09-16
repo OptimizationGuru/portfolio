@@ -7,23 +7,31 @@ import { FiMenu, FiX } from 'react-icons/fi';
 const Navbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
+  const print = () => {
+    console.log('clicked header');
+  };
+
   return (
     <div className="w-full sticky top-0 z-50 flex justify-around items-center py-4 px-2 md:px-10 font-titleFont border-b-[1px] border-b-gray-100 bg-bodyColor">
       {/* Logo and Title */}
-      <div className="flex items-center gap-2">
-        <img
-          src={bannerImg}
-          alt="logo"
-          className="w-12 h-12 rounded-full mt-2"
-        />
-        <p className="font-titleFont text-gray-400 text-2xl font-medium uppercase hover:text-designColor duration-300">
-          Shivam
-        </p>
+      <div className="flex items-center gap-3">
+        <div className="-mt-1">
+          <img
+            src={bannerImg}
+            alt="logo"
+            className="w-12 h-12 rounded-full mt-2"
+          />
+        </div>
+        <div>
+          <p className="font-titleFont text-gray-400 text-2xl font-medium uppercase hover:text-designColor duration-300">
+            Shivam
+          </p>
+        </div>
       </div>
 
       {/* Navbar Links (visible on medium and larger screens) */}
       <div className="hidden md:flex flex-grow justify-center">
-        <ul className="flex space-x-6">
+        <ul className="flex space-x-6 list-none">
           {navLinkArray.map(({ id, title, link }) => (
             <li
               key={id}
@@ -34,7 +42,7 @@ const Navbar = () => {
                 to={link}
                 spy={true}
                 smooth={true}
-                offset={-70} // Adjust this offset based on header height
+                offset={-20} // Adjust this offset based on header height
                 duration={500}
               >
                 {title}

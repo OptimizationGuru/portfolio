@@ -8,7 +8,7 @@ const Resume = () => {
   const [showComponent, setShowComponent] = useState(1);
 
   return (
-    <section id="resume" className="w-full py-20 border-b-[1px] border-b-black">
+    <section className="w-full py-20 border-b-[1px] border-b-black">
       <div className="flex justify-center items-center text-center">
         <Title title={'3+ Years of Experience'} subtitle={'Resume'} />
       </div>

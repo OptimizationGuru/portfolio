@@ -5,7 +5,6 @@ import RightBannner from './RightBannner';
 const Banner = () => {
   return (
     <section
-      id="home"
       className="w-full px-4 md:h-[650px] lg:h-auto md:py-12 lg:py-36 lg:mb-8 border-b-[1px] font-titleFont"
     >
       <div className="flex flex-col md:flex-row  md:mx-auto md:gap-10 lg:gap-12 justify-between items-center px-4  md:max-w-[1400px]">

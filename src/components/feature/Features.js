@@ -6,7 +6,6 @@ import { workDescription } from '../../constants';
 const Features = () => {
   return (
     <section
-      id="feature"
       className="w-full py-8 border-b-[1px] border-b-black "
     >
       <div className=" flex flex-col gap-8 items-center justify-center ">

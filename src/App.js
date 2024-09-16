@@ -17,10 +17,10 @@ function App() {
         </div>
 
         {/* Sections with IDs for React Scroll */}
-        <div id="banner" className="w-full ">
+        <div id="home" className="w-full ">
           <Banner />
         </div>
-        <div id="feature" className="w-full md:px-10 lg:px-16">
+        <div id="features" className="w-full md:px-10 lg:px-16">
           <Features />
         </div>
         <div id="projects" className="w-full md:px-10 lg:px-16">

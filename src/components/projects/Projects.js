@@ -12,7 +12,6 @@ import {
 const Projects = () => {
   return (
     <section
-      id="projects"
       className="w-full py-10 border-b-[1px] border-b-black "
     >
       <div className="flex justify-center items-center text-center mb-9">
