@@ -7,10 +7,6 @@ import { FiMenu, FiX } from 'react-icons/fi';
 const Navbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-  const print = () => {
-    console.log('clicked header');
-  };
-
   return (
     <div className="w-full sticky top-0 z-50 flex justify-around items-center py-4 px-2 md:px-10 font-titleFont border-b-[1px] border-b-gray-100 bg-bodyColor">
       {/* Logo and Title */}
