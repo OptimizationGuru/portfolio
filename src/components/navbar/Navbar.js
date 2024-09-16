@@ -9,7 +9,6 @@ const Navbar = () => {
 
   return (
     <div className="w-full sticky top-0 z-50 flex justify-around items-center py-4 px-2 md:px-10 font-titleFont border-b-[1px] border-b-gray-100 bg-bodyColor">
-      {/* Logo and Title */}
       <div className="flex items-center gap-3">
         <div className="-mt-1">
           <img
@@ -25,7 +24,6 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Navbar Links (visible on medium and larger screens) */}
       <div className="hidden md:flex flex-grow justify-center">
         <ul className="flex space-x-6 list-none">
           {navLinkArray.map(({ id, title, link }) => (
@@ -38,8 +36,8 @@ const Navbar = () => {
                 to={link}
                 spy={true}
                 smooth={true}
-                offset={-20} // Adjust this offset based on header height
-                duration={500}
+                offset={-80}
+                duration={450}
               >
                 {title}
               </Link>
@@ -48,7 +46,6 @@ const Navbar = () => {
         </ul>
       </div>
 
-      {/* Hamburger Menu (visible on mobile) */}
       <div className="md:hidden">
         <button
           onClick={() => setIsSidebarOpen(!isSidebarOpen)}
@@ -58,7 +55,6 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Sidebar (visible on mobile) */}
       <div
         className={`fixed top-0 left-0 h-full w-64 bg-bodyColor shadow-lg transform ${
           isSidebarOpen ? 'translate-x-0' : '-translate-x-full'
@@ -106,7 +102,6 @@ const Navbar = () => {
         </ul>
       </div>
 
-      {/* Overlay for Sidebar (visible when sidebar is open) */}
       {isSidebarOpen && (
         <div
           className="fixed inset-0 bg-black opacity-50 z-30"

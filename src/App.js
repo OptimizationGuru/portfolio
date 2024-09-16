@@ -11,7 +11,6 @@ function App() {
   return (
     <div className="w-screen min-h-screen bg-bodyColor">
       <div className="w-full h-full text-lightText pb-5 flex flex-col items-center justify-between gap-4">
-        {/* Navbar */}
         <div className="w-full sticky top-0 z-50">
           <Navbar />
         </div>

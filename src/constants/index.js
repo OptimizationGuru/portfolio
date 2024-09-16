@@ -2,7 +2,7 @@ import { SiCodementor, SiMui } from 'react-icons/si';
 import { FaCode } from 'react-icons/fa';
 import { CgPerformance } from 'react-icons/cg';
 import { TiWavesOutline } from 'react-icons/ti';
-import { FcCollaboration } from 'react-icons/fc';
+import { GrGroup } from 'react-icons/gr';
 
 const navLinkArray = [
   { id: 101, title: 'Home', link: 'home' },
@@ -14,7 +14,6 @@ const navLinkArray = [
 
 export const introduction =
   'As a full-stack developer, I build responsive web apps using React, Vue 3, and Tailwind CSS, integrating Redux Toolkit and third-party APIs. I ensure efficient backend performance with TypeScript, focusing on accessibility and seamless user experiences.';
-export default navLinkArray;
 
 export const nextStreamDesc =
   'a cutting-edge streaming platform optimized for lightning-fast video loading, utilizing debouncing and caching for efficiency, offering exceptional user experience with real-time search suggestions and a robust live chat feature.';
@@ -54,7 +53,7 @@ export const workDescription = [
     title: 'Collaborations',
     description:
       'Led development and cross-functional teams to deliver projects aligned with business goals and user needs for seamless execution..',
-    icon: <FcCollaboration />,
+    icon: <GrGroup />,
   },
   {
     id: 5,
@@ -109,6 +108,8 @@ export const fieldTypes = [
     initialError: 'Message field is Empty',
   },
 ];
+
+export default navLinkArray;
 
 export const work_desc = [
   '🌟 Enabled 60s battery swaps, improving efficiency by 30%.',
