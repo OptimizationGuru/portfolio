@@ -138,59 +138,57 @@ export const work_desc4 = [
 export const projectLinks = [
   {
     id: 1,
-    liveUrl: 'https://netflixgpt-3cb4b.web.app/',
-    githubUrl: 'https://github.com/OptimizationGuru/netflix-gpt/',
+    liveUrl: 'https://createmate.netlify.app/',
+    githubUrl: 'https://github.com/OptimizationGuru/doodle',
   },
   {
     id: 2,
     liveUrl: 'https://netflixgpt-3cb4b.web.app/',
-    githubUrl: 'https://github.com/OptimizationGuru/echoview',
+    githubUrl: 'https://github.com/OptimizationGuru/netflix-gpt',
   },
 
   {
     id: 3,
-    liveUrl: 'https://netflixgpt-3cb4b.web.app/',
+    liveUrl: 'https://thesoftwareengineer.co/',
     githubUrl: 'https://github.com/OptimizationGuru/portfolio',
   },
 ];
 
-export const projectNextStreamDBullets = [
+export const createMateBullets = [
   {
     id: 1,
-    desc: '🌟 Cutting-edge streaming platform optimized for lightning-fast video loading.',
+    desc: '🎨 Empowering creators with tools for effortless design and collaboration.',
   },
   {
     id: 2,
-    desc: '🌟 Utilized code-splitting, lazy-loading, debouncing and caching for efficiency.',
+    desc: '🚀 Fast and responsive platform, made for smooth teamwork and creativity.',
   },
-
   {
     id: 3,
-    desc: ' 🌟 Delivered exceptional user experience with real-time search suggestions',
+    desc: '📱 Easy-to-use interface, optimized for both desktop and mobile users.',
   },
   {
     id: 4,
-    desc: ' 🌟 Integrated a robust live chat feature with api polling',
+    desc: '💡 Inspiring innovation with real-time project sharing and feedback options.',
   },
 ];
 
 export const projectMovieStoreBullets = [
   {
     id: 1,
-    desc: '🌟 Cutting-edge streaming platform optimized for lightning-fast video loading.',
+    desc: '⚡ Cutting-edge streaming platform optimized for lightning-fast video loading.',
   },
   {
     id: 2,
-    desc: '🌟 Utilized code-splitting, lazy-loading, debouncing and caching for efficiency.',
+    desc: '🔄 Utilized code-splitting, lazy-loading, debouncing, and caching for efficiency.',
   },
-
   {
     id: 3,
-    desc: ' 🌟 Delivered exceptional user experience with real-time search suggestions',
+    desc: '✨ Delivered exceptional user experience with real-time search suggestions.',
   },
   {
     id: 4,
-    desc: ' 🌟 Integrated a robust live chat feature with api polling',
+    desc: '💬 Integrated a robust live chat feature with API polling.',
   },
 ];
 
