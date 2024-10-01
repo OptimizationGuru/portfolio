@@ -1,7 +1,7 @@
 import React from 'react';
 import Title from '../feature/Title';
 import ProjectCard from './ProjectCard';
-import { CreateMate, projectOne, projectTwo } from '../../assets';
+import { FirstCreation, projectOne, projectTwo } from '../../assets';
 import {
   createMateBullets,
   projectLinks,
@@ -23,7 +23,7 @@ const Projects = () => {
           <ProjectCard
             title={'CREATEMATE'}
             desc={createMateBullets}
-            img={CreateMate}
+            img={FirstCreation}
             liveUrl={projectLinks[0].liveUrl}
             githubUrl={projectLinks[0].githubUrl}
           />
