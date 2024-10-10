@@ -5,8 +5,8 @@ import { FirstCreation, projectOne, projectTwo } from '../../assets';
 import {
   createMateBullets,
   projectLinks,
-  projectMovieStoreBullets,
   projectPortfolioBullets,
+  projectTradeOptions,
 } from '../../constants';
 
 const Projects = () => {
@@ -30,8 +30,8 @@ const Projects = () => {
         </div>
         <div className="w-[100%] items-center justify-center text-left md:ml-10">
           <ProjectCard
-            title={'NEXTSTREAM'}
-            desc={projectMovieStoreBullets}
+            title={'Trade Insights'}
+            desc={projectTradeOptions}
             img={projectTwo}
             liveUrl={projectLinks[1].liveUrl}
             githubUrl={projectLinks[1].githubUrl}
