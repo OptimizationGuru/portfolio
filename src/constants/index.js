@@ -143,8 +143,8 @@ export const projectLinks = [
   },
   {
     id: 2,
-    liveUrl: 'https://netflixgpt-3cb4b.web.app/',
-    githubUrl: 'https://github.com/OptimizationGuru/netflix-gpt',
+    liveUrl: 'https://options-insights.netlify.app/',
+    githubUrl: 'https://github.com/OptimizationGuru/trade-insights',
   },
 
   {
@@ -173,22 +173,24 @@ export const createMateBullets = [
   },
 ];
 
-export const projectMovieStoreBullets = [
+export const projectTradeOptions = [
   {
     id: 1,
-    desc: '⚡ Cutting-edge streaming platform optimized for lightning-fast video loading.',
+    desc: '⚡ Open source project focused on demonstrating minimal UI for Options Analytics and Strategy builder platform..',
   },
+
   {
     id: 2,
-    desc: '🔄 Utilized code-splitting, lazy-loading, debouncing, and caching for efficiency.',
+    desc: '🔄 Utilized next.js, chart.js, react-chartjs, pwa.',
   },
+
   {
     id: 3,
-    desc: '✨ Delivered exceptional user experience with real-time search suggestions.',
+    desc: '💬 Can be used for creating strategy for options-trading dummy.',
   },
   {
     id: 4,
-    desc: '💬 Integrated a robust live chat feature with API polling.',
+    desc: '✨ Delivered exceptional user experience with real-time search suggestions.',
   },
 ];
 
