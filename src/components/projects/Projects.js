@@ -19,15 +19,6 @@ const Projects = () => {
         />
       </div>
       <div className="grid grid-cols-1 items-center px-4 gap-5 md:gap-8 md:px-20 md:w-[98%] md:justify-center md:-ml-4 lg:w-[90%] lg:grid-cols-2 lg:gap-16 lg:items-center lg:justify-center lg:text-center lg:px-4 xl:grid-cols-3 xl:w-[90%] xl:ml-6">
-        <div className="w-[100%] items-center justify-center text-left md:ml-10 ">
-          <ProjectCard
-            title={'CREATEMATE'}
-            desc={createMateBullets}
-            img={FirstCreation}
-            liveUrl={projectLinks[0].liveUrl}
-            githubUrl={projectLinks[0].githubUrl}
-          />
-        </div>
         <div className="w-[100%] items-center justify-center text-left md:ml-10">
           <ProjectCard
             title={'Trade Insights'}
@@ -37,6 +28,16 @@ const Projects = () => {
             githubUrl={projectLinks[1].githubUrl}
           />
         </div>
+        <div className="w-[100%] items-center justify-center text-left md:ml-10 ">
+          <ProjectCard
+            title={'CREATEMATE'}
+            desc={createMateBullets}
+            img={FirstCreation}
+            liveUrl={projectLinks[0].liveUrl}
+            githubUrl={projectLinks[0].githubUrl}
+          />
+        </div>
+
         <div className="w-[100%] items-center justify-center text-left md:ml-10">
           <ProjectCard
             title={'Cravings'}
