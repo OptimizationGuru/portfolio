@@ -176,21 +176,22 @@ export const createMateBullets = [
 export const projectTradeOptions = [
   {
     id: 1,
-    desc: '⚡ Open source project focused on demonstrating minimal UI for Options Analytics and Strategy builder platform..',
+    desc: '🔥 Options Insights: Maximize your trading potential with powerful options trading tool',
   },
 
   {
     id: 2,
-    desc: '🔄 Utilized next.js, chart.js, react-chartjs, pwa.',
+    desc: '⚡ Open-source project showcasing a minimal UI for options analytics and strategy building',
   },
 
   {
     id: 3,
-    desc: '💬 Can be used for creating strategy for options-trading dummy.',
+    desc: '🔄 Create scalable strategies focused on risk management and performance.',
   },
+
   {
-    id: 4,
-    desc: '✨ Delivered exceptional user experience with real-time search suggestions.',
+    id: 5,
+    desc: '💬Gain insights to improve decision-making for all traders..',
   },
 ];
 
