@@ -1,12 +1,18 @@
-// import all assets here and export all of them  for ease access
-
 import contantImg from './images/contact/contact_img.png';
 
 import logo from './bannerImg.jpeg';
-import projectOne from './images/projects/projectOne.jpg';
-import projectTwo from './images/projects/projectTwo.jpg';
 import CreateMate from './images/projects/CreateMate.png';
 import bannerImg from './bannerImg.jpeg';
 import FirstCreation from './images/projects/FirstCreation.png';
+import Hustle from './hustle.png';
+import Options from './tradex.png';
 
-export { contantImg, bannerImg, logo, projectOne, projectTwo, CreateMate, FirstCreation };
+export {
+  contantImg,
+  bannerImg,
+  logo,
+  CreateMate,
+  FirstCreation,
+  Hustle,
+  Options,
+};

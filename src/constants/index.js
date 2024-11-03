@@ -138,8 +138,8 @@ export const work_desc4 = [
 export const projectLinks = [
   {
     id: 1,
-    liveUrl: 'https://createmate.netlify.app/',
-    githubUrl: 'https://github.com/OptimizationGuru/doodle',
+    liveUrl: 'https://hustlespot.netlify.app/',
+    githubUrl: 'https://github.com/OptimizationGuru/task-manager',
   },
   {
     id: 2,
@@ -149,27 +149,27 @@ export const projectLinks = [
 
   {
     id: 3,
-    liveUrl: 'https://thesoftwareengineer.co/',
-    githubUrl: 'https://github.com/OptimizationGuru/portfolio',
+    liveUrl: 'https://createmate.netlify.app/',
+    githubUrl: 'https://github.com/OptimizationGuru/doodle',
   },
 ];
 
-export const createMateBullets = [
+export const hustleSpotBullets = [
   {
     id: 1,
-    desc: '🎨 Empowering creators with tools for effortless design and collaboration.',
+    desc: '📅 Effortless task organization with smart filters and sorting options.',
   },
   {
     id: 2,
-    desc: '🚀 Fast and responsive platform, made for smooth teamwork and creativity.',
+    desc: '🔍 Quick search functionality for easy task discovery and tracking.',
   },
   {
     id: 3,
-    desc: '📱 Easy-to-use interface, optimized for both desktop and mobile users.',
+    desc: '📈 Prioritization and status-based views for efficient workflow management.',
   },
   {
     id: 4,
-    desc: '💡 Inspiring innovation with real-time project sharing and feedback options.',
+    desc: '🤝 Collaborative features to boost teamwork and productivity.',
   },
 ];
 
@@ -195,22 +195,21 @@ export const projectTradeOptions = [
   },
 ];
 
-export const projectPortfolioBullets = [
+export const createMateBullets = [
   {
     id: 1,
-    desc: '🌟 Cutting-edge streaming platform optimized for lightning-fast video loading.',
+    desc: '🎨 Empowering creators with tools for effortless design and collaboration.',
   },
   {
     id: 2,
-    desc: '🌟 Utilized code-splitting, lazy-loading, debouncing and caching for efficiency.',
+    desc: '🚀 Fast and responsive platform, made for smooth teamwork and creativity.',
   },
-
   {
     id: 3,
-    desc: ' 🌟 Delivered exceptional user experience with real-time search suggestions',
+    desc: '📱 Easy-to-use interface, optimized for both desktop and mobile users.',
   },
   {
     id: 4,
-    desc: ' 🌟 Integrated a robust live chat feature with api polling',
+    desc: '💡 Inspiring innovation with real-time project sharing and feedback options.',
   },
 ];

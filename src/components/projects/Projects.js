@@ -1,11 +1,11 @@
 import React from 'react';
 import Title from '../feature/Title';
 import ProjectCard from './ProjectCard';
-import { FirstCreation, projectOne, projectTwo } from '../../assets';
+import { FirstCreation, Hustle, Options } from '../../assets';
 import {
   createMateBullets,
+  hustleSpotBullets,
   projectLinks,
-  projectPortfolioBullets,
   projectTradeOptions,
 } from '../../constants';
 
@@ -23,16 +23,16 @@ const Projects = () => {
           <ProjectCard
             title={'Options Insights'}
             desc={projectTradeOptions}
-            img={projectTwo}
+            img={Options}
             liveUrl={projectLinks[1].liveUrl}
             githubUrl={projectLinks[1].githubUrl}
           />
         </div>
         <div className="w-[100%] items-center justify-center text-left md:ml-10 ">
           <ProjectCard
-            title={'CREATEMATE'}
-            desc={createMateBullets}
-            img={FirstCreation}
+            title={'HustleSpot'}
+            desc={hustleSpotBullets}
+            img={Hustle}
             liveUrl={projectLinks[0].liveUrl}
             githubUrl={projectLinks[0].githubUrl}
           />
@@ -40,9 +40,9 @@ const Projects = () => {
 
         <div className="w-[100%] items-center justify-center text-left md:ml-10">
           <ProjectCard
-            title={'Cravings'}
-            desc={projectPortfolioBullets}
-            img={projectOne}
+            title={'CreateMate'}
+            desc={createMateBullets}
+            img={FirstCreation}
             liveUrl={projectLinks[2].liveUrl}
             githubUrl={projectLinks[2].githubUrl}
           />
